@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.logo {
+  width: 197px;
+  height: 36px;
+}/*# sourceMappingURL=style.css.map */
