@@ -1,0 +1,34 @@
+@import '_button.scss';
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6;
+}
+
+.explore h1{
+    padding-left: 42px;
+}
+
+.explore p{
+    font-weight: 300;
+    font-size: 1.125rem;
+    padding-left: 34px;
+}
+
+.functioning{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.function{
+    height: 72.38px;
+}
+
+.restaurants{
+    width: 90%;
+    height: 251px;
+}

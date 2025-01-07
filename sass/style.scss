@@ -1,25 +1,48 @@
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
+@import '_variables.scss';
+@import 'header.scss';
+@import '_main.scss';
+@import '_footer.scss';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Roboto", serif;
+body {
     margin: 0 auto;
     max-width: 1440px;
+    background: #FFFFFF;
+    font-family: $font-text;
 }
 
-img{
+img {
     object-fit: cover;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
+    width: 100%;
 }
 
-.logo{
-    width: 197px;
-    height: 36px;
+// styles pour les tablettes.
+@media (min-width: 767.99px) {
+
+    header{
+        height: 113px;
+    }
+
+}
+
+// styles pour les ordinateurs.
+@media (min-width: 1024px) {
+
+    header{
+        height: 146px;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+
+    address{
+        box-shadow: none;
+    }
 }
