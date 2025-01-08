@@ -1,11 +1,14 @@
 @import '_button.scss';
 
+main{
+    background-color: #F6F6F6;
+}
+
 .explore{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F6F6F6;
 }
 
 .explore h1{
@@ -18,17 +21,53 @@
     padding-left: 34px;
 }
 
-.functioning{
+.functioning, .places{
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding: 0 20px;   
+}
+.functioning{
+    background: #FFFFFF;
 }
 
 .function{
     height: 72.38px;
 }
 
-.restaurants{
-    width: 90%;
+.places{
+    gap: 18px;
+}
+
+.image-new{
+    position: relative;
+    display: inline-block;
+ 
+      &::after {
+        content: ""; //vous devez définir content, sinon le pseudo-élément ne sera pas rendu.
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        width: 80px;
+        height: 29px;
+        background-image: url('../assets/Nouveau.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+}
+
+.restaurants { 
     height: 251px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+
+    img{
+        border-radius:15px 15px 0 0;
+    }
+}
+
+.card-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

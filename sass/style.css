@@ -41,44 +41,52 @@ address {
 }
 
 .btn {
-  width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   color: #fff;
-  font-size: 1rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   font-weight: 500;
+  font-size: 1rem;
 }
-.btn:hover {
+
+.btn-explore {
+  width: 218px;
+}
+.btn-explore:hover {
   opacity: 0.8;
 }
 
 .btn-menu {
+  width: 100%;
   height: 72.38px;
-  width: 95%;
-  display: flex;
-  align-items: center;
   border-radius: 20px;
-  border: none;
+  color: #000000;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   background: #F6F6F6;
-  font-size: 1rem;
-  font-weight: 500;
+  justify-content: flex-start;
+  gap: 15px;
 }
 
 .btn-card {
-  width: 349px;
   height: 69px;
-  display: flex;
   border-radius: 15.04px;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   padding: 15px;
-  background-color: #fff;
+  color: #000000;
+  background: #fff;
 }
 
 .btn-commander {
   width: 186px;
+}
+
+main {
+  background-color: #F6F6F6;
 }
 
 .explore {
@@ -86,7 +94,6 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6;
 }
 
 .explore h1 {
@@ -99,19 +106,54 @@ address {
   padding-left: 34px;
 }
 
-.functioning {
+.functioning, .places {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding: 0 20px;
+}
+
+.functioning {
+  background: #FFFFFF;
 }
 
 .function {
   height: 72.38px;
 }
 
+.places {
+  gap: 18px;
+}
+
+.image-new {
+  position: relative;
+  display: inline-block;
+}
+.image-new::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 80px;
+  height: 29px;
+  background-image: url("../assets/Nouveau.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .restaurants {
-  width: 90%;
   height: 251px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.restaurants img {
+  border-radius: 15px 15px 0 0;
+}
+
+.card-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 footer {
@@ -120,7 +162,22 @@ footer {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
   gap: 7px;
+}
+
+svg {
+  fill: none;
+  cursor: pointer;
+}
+svg.clicked {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
 * {
@@ -143,6 +200,11 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .other-page h1 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -152,6 +214,10 @@ img {
   font-size: 1rem;
   font-weight: 300;
   border-bottom: #99e2d0 3px solid;
+}
+
+h3 {
+  font-size: 1.125rem;
 }
 
 @media (min-width: 767.99px) {

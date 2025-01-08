@@ -2,6 +2,7 @@
 @import 'header.scss';
 @import '_main.scss';
 @import '_footer.scss';
+@import '_svg.scss';
 
 * {
     margin: 0;
@@ -22,6 +23,11 @@ img {
     width: 100%;
 }
 
+a{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .other-page h1{
     font-family: $font-title;
     font-weight: 400;
@@ -32,6 +38,11 @@ img {
     font-weight: 300;
     border-bottom:$tertiary-color 3px solid;
 }
+
+h3{
+    font-size: 1.125rem;
+}
+
 
 // styles pour les tablettes.
 @media (min-width: 767.99px) {
