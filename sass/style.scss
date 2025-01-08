@@ -22,6 +22,16 @@ img {
     width: 100%;
 }
 
+.other-page h1{
+    font-family: $font-title;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 // styles pour les tablettes.
 @media (min-width: 767.99px) {
 
