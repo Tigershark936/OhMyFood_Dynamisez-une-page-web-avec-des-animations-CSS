@@ -43,28 +43,3 @@ h3{
     font-size: 1.125rem;
 }
 
-
-// styles pour les tablettes.
-@media (min-width: 767.99px) {
-
-    header{
-        height: 113px;
-    }
-
-}
-
-// styles pour les ordinateurs.
-@media (min-width: 1024px) {
-
-    header{
-        height: 146px;
-    }
-
-    .logo img{
-        width: 200px;
-    }
-
-    address{
-        box-shadow: none;
-    }
-}

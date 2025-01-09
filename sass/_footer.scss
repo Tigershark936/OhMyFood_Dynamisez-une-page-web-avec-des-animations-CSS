@@ -14,3 +14,21 @@ footer{
     align-items: center; 
     gap: 7px;
 }
+
+// styles pour les tablettes.
+@media (min-width: 767.99px) {
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .inverse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+    }
+
+    
+}
