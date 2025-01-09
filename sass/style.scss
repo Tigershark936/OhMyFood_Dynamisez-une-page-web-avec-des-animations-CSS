@@ -36,7 +36,17 @@ a{
 .other-page h2{
     font-size: 1rem;
     font-weight: 300;
-    border-bottom:$tertiary-color 3px solid;
+    position: relative;
+
+    &::after {
+        content: ''; // Nécessaire pour afficher le pseudo-élément
+        display: block;
+        width: 12%; // La largeur du soulignement (ici, la moitié)
+        height: 3px; // Épaisseur du soulignement
+        background-color: $tertiary-color; // Couleur de votre soulignement
+        position: absolute;
+        bottom: -3px; // Ajuste la position verticale en fonction de l'épaisseur
+    }
 }
 
 h3{

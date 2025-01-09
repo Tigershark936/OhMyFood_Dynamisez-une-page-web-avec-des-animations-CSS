@@ -126,6 +126,10 @@ main {
   padding-top: 39px;
 }
 
+.explore h1 {
+  margin-left: 12px;
+}
+
 .explore p {
   font-weight: 300;
   font-size: 1.125rem;
@@ -250,6 +254,13 @@ svg.clicked {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
+.btn svg {
+  fill: none;
+}
+.btn svg:active {
+  background: #9356dc;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -283,7 +294,16 @@ a {
 .other-page h2 {
   font-size: 1rem;
   font-weight: 300;
-  border-bottom: #99e2d0 3px solid;
+  position: relative;
+}
+.other-page h2::after {
+  content: "";
+  display: block;
+  width: 12%;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  bottom: -3px;
 }
 
 h3 {

@@ -20,7 +20,7 @@ main{
 }
 
 .explore h1{
-    // margin-left: 12px;
+    margin-left: 12px;
 }
 
 .explore p{
@@ -97,7 +97,7 @@ main{
 
 // styles pour les tablettes.
 @media (min-width: 767.99px) {
-    
+
     .menu{
         display: flex;
         justify-content: space-around;
