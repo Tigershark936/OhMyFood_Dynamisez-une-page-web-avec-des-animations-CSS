@@ -141,6 +141,11 @@ main {
   padding: 0 20px;
 }
 
+.places {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .functioning {
   background: #FFFFFF;
 }
@@ -149,7 +154,9 @@ main {
   height: 72.38px;
 }
 
-.places {
+aside {
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
 
@@ -205,15 +212,14 @@ main {
     justify-content: space-around;
     gap: 25px;
   }
-  .restaurants a {
-    display: flex;
+  aside {
+    flex-direction: row;
   }
 }
 @media (min-width: 1024px) {
   .other-page main {
     width: 1221px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 8%;
     gap: 40px;
   }
 }
@@ -235,6 +241,7 @@ footer {
 
 @media (min-width: 767.99px) {
   footer {
+    height: 114px;
     display: flex;
     flex-direction: row-reverse;
   }
