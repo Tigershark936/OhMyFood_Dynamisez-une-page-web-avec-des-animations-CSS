@@ -1,0 +1,10 @@
+@mixin textStyle($color, $fontWeight, $fontStyle, $fontSize: 1rem) {
+
+}
+
+@mixin d-Flex($justifyContent, $alignItems, $orientation: row){
+    display: flex;
+    flex-direction: $orientation;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
