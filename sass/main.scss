@@ -1,0 +1,9 @@
+@use './base/index.scss' as base;
+@use './abstracts/index.scss' as abstracts;
+@use './compenents/index.scss' as compenents;
+// @use './layout/index.scss' as layout;
+// @use './pages/index.scss' as pages;
+
+body {
+  background-color: abstracts.$background-color;
+}

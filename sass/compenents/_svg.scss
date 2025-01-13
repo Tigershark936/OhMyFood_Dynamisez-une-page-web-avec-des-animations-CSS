@@ -3,7 +3,7 @@ svg{
     cursor: pointer;
     
     &.clicked {
-        background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+        // background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
     }
 }
 
@@ -11,6 +11,6 @@ svg{
     fill: none;
     
     &:active{
-        background: $primary-color;
+        // background: $primary-color;
     }
 }

@@ -1,4 +1,2 @@
-@import '_svg';
-@import '_button';
-
-@use '../abstracts/mixin'
+@forward '_button.scss';
+@forward '_svg.scss';

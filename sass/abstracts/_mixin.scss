@@ -1,5 +1,8 @@
 @mixin textStyle($color, $fontWeight, $fontStyle, $fontSize: 1rem) {
-
+    color: $color;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+    font-size: $fontSize;
 }
 
 @mixin d-Flex($justifyContent, $alignItems, $orientation: row){
@@ -7,4 +10,10 @@
     flex-direction: $orientation;
     justify-content: $justifyContent;
     align-items: $alignItems;
+}
+
+@mixin flexMid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
