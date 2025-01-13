@@ -1,9 +1,27 @@
 @use './base/index.scss' as base;
 @use './abstracts/index.scss' as abstracts;
 @use './compenents/index.scss' as compenents;
-// @use './layout/index.scss' as layout;
-// @use './pages/index.scss' as pages;
+@use './layout/index.scss' as layout;
+@use './pages/index.scss' as pages;
+
+@import './abstracts/index.scss';
 
 body {
   background-color: abstracts.$background-color;
+}
+
+main {
+    @include d-Flex(center, center, column);
+    @include spacing(0 20px);
+
+    .function {
+        @include dimension(100%);
+        @include d-Flex(center, center, column);
+        gap: 26px;
+
+        .function-title{
+            @include d-Flex(flex-start, center);
+            background-color: red;
+        }
+    }
 }
