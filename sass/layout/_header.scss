@@ -2,10 +2,22 @@
 
 
 header{
+    @include dimension(100%);
+    @include d-Flex(center, center, column);
+    background-color: $secondary-background-color;
+    
+        h1{
+            @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text);
+        }
+
+        p{
+            @include textStyle(300, normal, 1.125rem, $fontFamily:$font-text);
+        }
     
     nav{
-        @include d-Flex(center, center);
+        background-color: $background-color;
         @include dimension(100%, 63px);
+        @include d-Flex(center, center);
     }
 
     img{
@@ -22,7 +34,12 @@ header{
     }
 
     .explore{
-        @include d-Flex(center, center, column)
+        @include d-Flex(center, center, column);
+        @include padding(39.5px, 0, 27px, 0);
+    }
+
+    .btn{
+      @include margin(0, 0, 57px, 0);  
     }
 }
 

@@ -1,6 +1,6 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -47,6 +47,10 @@ td, th {
 .btn {
   width: 218px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   font-weight: 500;
   font-style: normal;
@@ -61,10 +65,6 @@ td, th {
 .btn-function {
   width: 100%;
   height: 72.38px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   gap: 23px;
   background: #F6F6F6;
   color: black;
@@ -72,13 +72,37 @@ td, th {
   border: none;
 }
 
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+header h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-family: "Roboto", serif;
+  color: #000;
+}
+header p {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.125rem;
+  font-family: "Roboto", serif;
+  color: #000;
+}
 header nav {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 63px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
-  height: 63px;
 }
 header img {
   width: 197px;
@@ -105,6 +129,16 @@ header .explore {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 39.5px;
+  padding-right: 0;
+  padding-bottom: 27px;
+  padding-left: 0;
+}
+header .btn {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 57px;
+  margin-left: 0;
 }
 
 footer {
@@ -121,26 +155,45 @@ footer {
   padding-bottom: 22px;
   padding-left: 25px;
 }
+footer .footer-title {
+  width: 139px;
+  height: 27px;
+}
 footer .footer-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   gap: 7px;
 }
 footer .footer-item {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: row;
   gap: 10px;
 }
 
+@media (min-width: 768px) {
+  footer {
+    width: 100%;
+    height: 114px;
+    background-color: #353535;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+  footer .footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  max-width: 1440px;
   background-color: #FFFFFF;
 }
 body a {
@@ -154,13 +207,6 @@ body h2 {
   font-family: "Roboto", serif;
   color: #000;
 }
-body h3 {
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.125rem;
-  font-family: "Roboto", serif;
-  color: #000;
-}
 
 main .function {
   width: 100%;
@@ -169,19 +215,34 @@ main .function {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 48px;
-  margin-right: 0;
-  margin-bottom: 68px;
-  margin-left: 20px;
-  gap: 26px;
+  padding-top: 48px;
+  padding-right: 20px;
+  padding-bottom: 68px;
+  padding-left: 20px;
+  gap: 25px;
 }
-
-.menu {
+main .function h3 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  color: #000;
+}
+main .function p {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-family: "Roboto", serif;
+  color: #FFFFFF;
+  border-radius: 50%;
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: #9356dc;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 25px;
+  flex-direction: row;
 }
 
 .places {
@@ -195,6 +256,13 @@ main .function {
   padding-bottom: 66px;
   padding-left: 20px;
   gap: 18px;
+}
+.places h3 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  font-family: "Roboto", serif;
+  color: #000;
 }
 .places aside {
   display: flex;
@@ -210,6 +278,9 @@ main .function {
 .places article img {
   object-fit: cover;
 }
+.places .image-new {
+  position: absolute;
+}
 .places .card-item {
   display: flex;
   justify-content: space-between;
@@ -220,6 +291,23 @@ main .function {
   padding-bottom: 12px;
   padding-left: 13px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+@media (min-width: 768px) {
+  .function {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  article a {
+    width: 490px;
+    height: auto;
+    display: flex;
+    justify-content: wrap;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

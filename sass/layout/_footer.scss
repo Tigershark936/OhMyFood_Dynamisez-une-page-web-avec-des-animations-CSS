@@ -5,14 +5,34 @@ footer{
     @include dimension(100%, 186px);
     @include textStyle(500, normal, $fontFamily:$font-text, $color:$background-color);
     @include padding(22px, 25px,22px, 25px);
-
+    
+    .footer-title{
+        @include dimension(139px, 27px);
+    }
+    
     .footer-nav{
-        @include d-Flex(flex-start, flex-start, column);
+        @include d-Flex(center, flex-start, column);
         gap: 7px;
     }
 
     .footer-item{
-        @include d-Flex(flex-start, center);
+        @include d-Flex(center, flex-start);
         gap: 10px;
     }
+}
+
+@media (min-width: 768px) {
+
+    footer{
+        @include dimension(100%, 114px);
+        background-color: $footer-background-color;
+        @include d-Flex(flex-start, center, row-reverse);
+        gap: 16px;
+
+        .footer-nav{
+            @include d-Flex(center, center);
+        }
+    }
+
+
 }
