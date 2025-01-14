@@ -1,0 +1,18 @@
+@import '../abstracts/index.scss';
+
+footer{
+    background-color: $footer-background-color;
+    @include dimension(100%, 186px);
+    @include textStyle(500, normal, $fontFamily:$font-text, $color:$background-color);
+    @include padding(22px, 25px,22px, 25px);
+
+    .footer-nav{
+        @include d-Flex(flex-start, flex-start, column);
+        gap: 7px;
+    }
+
+    .footer-item{
+        @include d-Flex(flex-start, center);
+        gap: 10px;
+    }
+}

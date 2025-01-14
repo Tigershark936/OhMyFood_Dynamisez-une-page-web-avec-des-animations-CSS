@@ -2,8 +2,7 @@
 
 
 header{
-    @include d-Flex(center, center, column);
-
+    
     nav{
         @include d-Flex(center, center);
         @include dimension(100%, 63px);
@@ -26,4 +25,5 @@ header{
         @include d-Flex(center, center, column)
     }
 }
+
 

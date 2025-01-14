@@ -7,21 +7,61 @@
 @import './abstracts/index.scss';
 
 body {
-  background-color: abstracts.$background-color;
+    @include d-Flex(center, center, column);
+    background-color: abstracts.$background-color;
+
+    a{
+        text-decoration: inherit; 
+        color: inherit;
+    }
+
+    h2{
+        @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text)
+    }
+
+    h3{
+        @include textStyle(700, normal, 1.125rem, $fontFamily:$font-text)
+    }
 }
 
 main {
-    @include d-Flex(center, center, column);
-    @include spacing(0 20px);
-
+    
     .function {
         @include dimension(100%);
-        @include d-Flex(center, center, column);
+        @include d-Flex(center, flex-start, column);
+        @include margin(48px, 0, 68px, 20px);
         gap: 26px;
+    }
+}
 
-        .function-title{
-            @include d-Flex(flex-start, center);
-            background-color: red;
+.menu{
+    @include d-Flex(center, center, column);
+    gap: 25px;
+}
+
+.places{
+    background-color: $secondary-background-color;
+    @include d-Flex(center, flex-start, column);
+    @include padding(54px, 20px, 66px, 20px);
+    gap: 18px;
+    
+    aside{
+        @include d-Flex(center, center, column);
+        gap: 18px;
+    }
+    
+    article {
+        @include border(15px);  
+
+        img{
+            object-fit: cover;
         }
     }
+    
+    .card-item{
+        @include d-Flex(space-between, center);
+        @include padding(16px, 25px, 12px, 13px);
+        @include shadow($shadows: 0px 4px 15px 0px #0000001A);
+    }
+    
 }
