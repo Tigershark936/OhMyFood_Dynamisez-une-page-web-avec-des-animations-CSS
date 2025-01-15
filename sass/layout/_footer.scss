@@ -27,7 +27,12 @@ footer{
 
         .footer-nav{
             @include d-Flex(flex-start, center);
-            // gap: 16px;
+            gap: 16px;
+        }
+
+        .footer-party{
+            @include d-Flex(center, center);
+            gap: 7px;
         }
     }
 

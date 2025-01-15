@@ -211,6 +211,14 @@ footer .footer-item {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    gap: 16px;
+  }
+  footer .footer-party {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 7px;
   }
 }
 body {
@@ -349,7 +357,7 @@ main .places .card-info {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: wrap;
     gap: 24px;

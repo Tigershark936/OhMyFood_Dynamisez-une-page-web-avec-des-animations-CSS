@@ -101,7 +101,7 @@ main {
 
     .container-places{
         @include dimension(100%); 
-        @include d-Flex(space-between, center, wrap);
+        @include d-Flex(space-evenly, center, wrap);
 
         gap: 24px;
     }
@@ -114,4 +114,7 @@ main {
         max-width: 1440px;
     }
 
+    .places{
+
+    }
 }
