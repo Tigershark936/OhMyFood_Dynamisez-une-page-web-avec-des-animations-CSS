@@ -13,9 +13,7 @@
 
 .btn-function{
     @include dimension(100%, 72.38px);
-    gap: 23px;
     background: $secondary-background-color;
-    // @include textStyle();
     color: black; 
     @include border(20px);
 }

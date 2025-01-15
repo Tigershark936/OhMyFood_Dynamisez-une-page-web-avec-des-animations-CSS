@@ -7,7 +7,6 @@
 @import './abstracts/index.scss';
 
 body {
-    max-width: 1440px;
     background-color: abstracts.$background-color;
 
     a{
@@ -16,20 +15,19 @@ body {
     }
 
     h2{
-        @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text)
+        @include dimension(100%);
+        @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text);
+        @include d-Flex(center, flex-start, column);
     }
 }
 
 main {
     
-    .function {
-        @include dimension(100%);
-        @include d-Flex(center, flex-start, column);
+    .function{
         @include padding(48px, 20px, 68px, 20px);
-        gap: 25px;
 
         h3{
-            @include textStyle(500, normal, 1rem, $fontFamily:$font-text)
+            @include textStyle(500, normal, 1rem, $fontFamily:$font-text);
         }
 
         p{
@@ -40,21 +38,24 @@ main {
             @include d-Flex(center, center);
         }
     }
+
+    .function-box{
+        @include dimension(100%);
+        @include d-Flex(center, center);
+        @include margin(26px);
+    }
 }
 
 .places{
     background-color: $secondary-background-color;
-    @include d-Flex(center, flex-start, column);
     @include padding(54px, 20px, 66px, 20px);
-    gap: 18px;
 
     h3{
-        @include textStyle(700, normal, 1.125rem, $fontFamily:$font-text)
+        @include textStyle(700, normal, 1.125rem, $fontFamily:$font-text);
     }
     
     aside{
         @include d-Flex(center, center, column);
-        gap: 18px;
     }
     
     article {
@@ -80,12 +81,21 @@ main {
 
 @media (min-width: 768px) {
 
+    body{
+        max-width: 1440px;
+    }
+    
     .function{
-        @include d-Flex(center, flex-start);
+        @include d-Flex(center, center, column);
+    }
+
+    .container{
+        @include dimension(100%); 
+        @include d-Flex(center, center);
+        gap: 24px;
     }
 
     article a{
         @include dimension(490px);
-        @include d-Flex(wrap, center, row);
     }
 }

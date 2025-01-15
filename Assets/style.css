@@ -65,7 +65,6 @@ td, th {
 .btn-function {
   width: 100%;
   height: 72.38px;
-  gap: 23px;
   background: #F6F6F6;
   color: black;
   border-radius: 20px;
@@ -87,6 +86,10 @@ header h1 {
   font-size: 1.5rem;
   font-family: "Roboto", serif;
   color: #000;
+  padding-top: 39.5px;
+  padding-right: 58px;
+  padding-bottom: 0;
+  padding-left: 42px;
 }
 header p {
   font-weight: 300;
@@ -94,6 +97,10 @@ header p {
   font-size: 1.125rem;
   font-family: "Roboto", serif;
   color: #000;
+  padding-top: 0;
+  padding-right: 26px;
+  padding-bottom: 27px;
+  padding-left: 34px;
 }
 header nav {
   background-color: #FFFFFF;
@@ -123,16 +130,6 @@ header address {
   width: 100%;
   height: 50px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-}
-header .explore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 39.5px;
-  padding-right: 0;
-  padding-bottom: 27px;
-  padding-left: 0;
 }
 header .btn {
   margin-top: 0;
@@ -193,7 +190,6 @@ footer .footer-item {
   }
 }
 body {
-  max-width: 1440px;
   background-color: #FFFFFF;
 }
 body a {
@@ -201,25 +197,24 @@ body a {
   color: inherit;
 }
 body h2 {
+  width: 100%;
+  height: auto;
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
   font-family: "Roboto", serif;
   color: #000;
-}
-
-main .function {
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+}
+
+main .function {
   padding-top: 48px;
   padding-right: 20px;
   padding-bottom: 68px;
   padding-left: 20px;
-  gap: 25px;
 }
 main .function h3 {
   font-weight: 500;
@@ -244,18 +239,25 @@ main .function p {
   align-items: center;
   flex-direction: row;
 }
+main .function-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 26px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
 
 .places {
   background-color: #F6F6F6;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
   padding-top: 54px;
   padding-right: 20px;
   padding-bottom: 66px;
   padding-left: 20px;
-  gap: 18px;
 }
 .places h3 {
   font-weight: 700;
@@ -269,7 +271,6 @@ main .function p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 18px;
 }
 .places article {
   border-radius: 15px;
@@ -294,19 +295,27 @@ main .function p {
 }
 
 @media (min-width: 768px) {
+  body {
+    max-width: 1440px;
+  }
   .function {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    gap: 24px;
   }
   article a {
     width: 490px;
     height: auto;
-    display: flex;
-    justify-content: wrap;
-    align-items: center;
-    flex-direction: row;
   }
 }
 
