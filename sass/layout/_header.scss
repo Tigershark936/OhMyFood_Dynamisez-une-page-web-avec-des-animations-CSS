@@ -40,4 +40,17 @@ header{
     }
 }
 
+@media (min-width: 1024px) {
+
+    header{
+
+        nav{
+            @include dimension(100%, 96px);
+        }
+        img{
+            @include dimension(200px, 34.2px);
+        }
+    }
+}
+
 

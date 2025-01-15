@@ -9,6 +9,10 @@
     @include textStyle(500, $fontFamily: $font-text, $color: $background-color);
     @include border(15px, none);
     @include shadow($shadows: 0px 4px 10px 0px #00000040);
+
+    &:hover{
+        opacity: 0.8;
+    }
 }
 
 .btn-function{
@@ -16,4 +20,13 @@
     background: $secondary-background-color;
     color: black; 
     @include border(20px);
+}
+
+.btn-card{
+    @include dimension(100%, 72px);
+    @include d-Flex(space-between,center);
+    background: $background-color;
+    color: #000;
+    @include border(15.04px, none);
+    @include shadow($shadows:0px 4.01px 15.04px 0px #0000001A);
 }

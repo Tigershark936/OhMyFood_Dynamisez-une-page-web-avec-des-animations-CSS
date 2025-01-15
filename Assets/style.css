@@ -1,7 +1,11 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
+}
+
+body {
+  margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,6 +65,9 @@ td, th {
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
+.btn:hover {
+  opacity: 0.8;
+}
 
 .btn-function {
   width: 100%;
@@ -69,6 +76,20 @@ td, th {
   color: black;
   border-radius: 20px;
   border: none;
+}
+
+.btn-card {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #FFFFFF;
+  color: #000;
+  border-radius: 15.04px;
+  border: none;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
 header {
@@ -138,6 +159,16 @@ header .btn {
   margin-left: 0;
 }
 
+@media (min-width: 1024px) {
+  header nav {
+    width: 100%;
+    height: 96px;
+  }
+  header img {
+    width: 200px;
+    height: 34.2px;
+  }
+}
 footer {
   background-color: #353535;
   width: 100%;
@@ -156,19 +187,12 @@ footer .footer-title {
   width: 139px;
   height: 27px;
 }
-footer .footer-nav {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 7px;
-}
 footer .footer-item {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 11px;
 }
 
 @media (min-width: 768px) {
@@ -184,7 +208,7 @@ footer .footer-item {
   }
   footer .footer-nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
   }
@@ -251,38 +275,50 @@ main .function-box {
   margin-bottom: 0;
   margin-left: 0;
 }
-
-.places {
+main .places {
   background-color: #F6F6F6;
   padding-top: 54px;
   padding-right: 20px;
-  padding-bottom: 66px;
+  padding-bottom: 50px;
   padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
 }
-.places h3 {
+main .places h3 {
   font-weight: 700;
   font-style: normal;
   font-size: 1.125rem;
   font-family: "Roboto", serif;
   color: #000;
 }
-.places aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+main .places p {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.063rem;
+  font-family: "Roboto", serif;
+  color: #000;
 }
-.places article {
-  border-radius: 15px;
-  border: none;
+main .places article {
+  width: 100%;
+  height: auto;
 }
-.places article img {
+main .places article img {
   object-fit: cover;
 }
-.places .image-new {
+main .places .image-new {
   position: absolute;
+  transform: translateX(150%);
 }
-.places .card-item {
+main .places .card-restaurants {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  margin-bottom: 16px;
+}
+main .places .card-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -291,20 +327,16 @@ main .function-box {
   padding-right: 25px;
   padding-bottom: 12px;
   padding-left: 13px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
 @media (min-width: 768px) {
-  body {
-    max-width: 1440px;
-  }
   .function {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .container {
+  .container-function {
     width: 100%;
     height: auto;
     display: flex;
@@ -313,9 +345,19 @@ main .function-box {
     flex-direction: row;
     gap: 24px;
   }
-  article a {
-    width: 490px;
+  .container-places {
+    width: 100%;
     height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: wrap;
+    gap: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    max-width: 1440px;
   }
 }
 

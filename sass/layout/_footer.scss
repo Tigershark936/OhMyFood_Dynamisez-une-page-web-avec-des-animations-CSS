@@ -1,5 +1,6 @@
 @import '../abstracts/index.scss';
 
+
 footer{
     background-color: $footer-background-color;
     @include dimension(100%, 186px);
@@ -10,14 +11,9 @@ footer{
         @include dimension(139px, 27px);
     }
     
-    .footer-nav{
-        @include d-Flex(center, flex-start, column);
-        gap: 7px;
-    }
-
     .footer-item{
-        @include d-Flex(center, flex-start);
-        gap: 10px;
+        @include d-Flex(flex-start, center);
+        gap: 11px;
     }
 }
 
@@ -30,7 +26,8 @@ footer{
         gap: 16px;
 
         .footer-nav{
-            @include d-Flex(center, center);
+            @include d-Flex(flex-start, center);
+            // gap: 16px;
         }
     }
 

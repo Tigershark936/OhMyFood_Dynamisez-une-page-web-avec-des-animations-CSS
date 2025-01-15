@@ -44,58 +44,74 @@ main {
         @include d-Flex(center, center);
         @include margin(26px);
     }
-}
-
-.places{
-    background-color: $secondary-background-color;
-    @include padding(54px, 20px, 66px, 20px);
-
-    h3{
-        @include textStyle(700, normal, 1.125rem, $fontFamily:$font-text);
-    }
     
-    aside{
+    .places{
+        background-color: $secondary-background-color;
+        @include padding(54px, 20px, 50px, 20px);
         @include d-Flex(center, center, column);
-    }
+        gap: 16px;
     
-    article {
-        @include border(15px);  
+        h3{
+            @include textStyle(700, normal, 1.125rem, $fontFamily:$font-text);
+        }
+    
+        p{
+            @include textStyle(300, normal, 1.063rem, $fontFamily:$font-text);
+        }
+        
+        article{
+            @include dimension(100%);
 
-        img{
-            object-fit: cover;
+            img{
+                object-fit: cover;  
+            }
+        }
+        
+        .image-new{
+            position: absolute;
+            transform: translateX(150%); // Ajustement pour le centrage horizontal
+        }
+        
+        .card-restaurants{
+            @include border(15px);  
+            @include shadow($shadows: 0px 4px 15px 0px #0000001A);
+            margin-bottom: 16px;
+        }
+        
+        .card-info{
+            @include d-Flex(space-between, center);
+            @include padding(16px, 25px, 12px, 13px);
         }
     }
-    
-    .image-new{
-        position: absolute;
-        // background-position: right top;
-    }
-    
-    .card-item{
-        @include d-Flex(space-between, center);
-        @include padding(16px, 25px, 12px, 13px);
-        @include shadow($shadows: 0px 4px 15px 0px #0000001A);
-    }
-    
 }
+
+
 
 @media (min-width: 768px) {
 
-    body{
-        max-width: 1440px;
-    }
-    
     .function{
         @include d-Flex(center, center, column);
     }
 
-    .container{
+    .container-function{
         @include dimension(100%); 
         @include d-Flex(center, center);
         gap: 24px;
     }
 
-    article a{
-        @include dimension(490px);
+    .container-places{
+        @include dimension(100%); 
+        @include d-Flex(space-between, center, wrap);
+
+        gap: 24px;
     }
+
+}
+
+@media (min-width: 1024px) {
+
+    body{
+        max-width: 1440px;
+    }
+
 }
