@@ -43,6 +43,12 @@ main {
         @include dimension(100%);
         @include d-Flex(center, center);
         @include margin(26px);
+        position: relative; // Doit toujours être présent dans la div parent pour avoir une action sur la div enfant.
+    }
+
+    .number-button{
+        position: absolute; //Doit être positionner dans la div enfant pour pouvoir le déplacer.
+        left: -12px;
     }
     
     .places{
@@ -61,15 +67,13 @@ main {
         
         article{
             @include dimension(100%);
-
-            img{
-                object-fit: cover;  
-            }
+            position: relative;
         }
         
         .image-new{
             position: absolute;
-            transform: translateX(150%); // Ajustement pour le centrage horizontal
+            right: 5px;
+            top: 8px;
         }
         
         .card-restaurants{
@@ -89,6 +93,7 @@ main {
 
 @media (min-width: 768px) {
 
+
     .function{
         @include d-Flex(center, center, column);
     }
@@ -96,16 +101,19 @@ main {
     .container-function{
         @include dimension(100%); 
         @include d-Flex(center, center);
-        gap: 24px;
+        gap: 36px;
     }
 
     .container-places{
         @include dimension(100%); 
-        @include d-Flex(space-evenly, center, wrap);
-
+        flex-wrap: wrap;
+        @include d-Flex(space-evenly, center,);
         gap: 24px;
     }
 
+    article{
+        max-width: 48%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -114,7 +122,18 @@ main {
         max-width: 1440px;
     }
 
-    .places{
+    main{
 
+        .function{
+            @include padding(50px, 207px, 50px, 180px);
+        }
+
+        .places{
+            @include padding(30px, 180px, 30px, 180px);
+        }
+    }
+
+    .footer-party{
+        padding-right: 30px;
     }
 }

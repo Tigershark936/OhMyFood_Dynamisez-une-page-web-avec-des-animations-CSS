@@ -5,10 +5,12 @@ header{
     @include dimension(100%);
     @include d-Flex(center, center, column);
     background-color: $secondary-background-color;
+    text-align: center;
     
     h1{
         @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text);
         @include padding(39.5px, 58px, 0, 42px);
+        margin-bottom: 10px;
     }
     
     p{

@@ -5,6 +5,7 @@
 .btn{
     @include dimension(218px, 50px);
     @include d-Flex(center, center, row);
+    gap: 20px;
     background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
     @include textStyle(500, $fontFamily: $font-text, $color: $background-color);
     @include border(15px, none);
