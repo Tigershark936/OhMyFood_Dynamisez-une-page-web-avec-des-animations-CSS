@@ -1,8 +1,5 @@
-@import '../abstracts/index.scss';
-
-
 header{
-    @include dimension(100%);
+    @include dimension(100%, auto);
     @include d-Flex(center, center, column);
     background-color: $secondary-background-color;
     text-align: center;

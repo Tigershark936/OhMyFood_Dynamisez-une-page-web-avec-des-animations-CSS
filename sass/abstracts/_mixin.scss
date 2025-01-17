@@ -13,7 +13,7 @@
     flex-direction: $orientation;
 }
 
-@mixin dimension($width: auto, $height: auto){
+@mixin dimension($width, $height){
     width: $width;
     height: $height;
 }

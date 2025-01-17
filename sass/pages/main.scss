@@ -1,13 +1,13 @@
-@use './base/index.scss' as base;
-@use './abstracts/index.scss' as abstracts;
-@use './compenents/index.scss' as compenents;
-@use './layout/index.scss' as layout;
-@use './pages/index.scss' as pages;
+@import '../abstracts/_variables.scss';
+@import '../abstracts/_mixin.scss';
+@import '../base/_reset.scss';
+@import '../compenents/_button.scss';
+@import '../layout/_header.scss';
+@import '../layout/_footer.scss';
 
-@import './abstracts/index.scss';
 
 body {
-    background-color: abstracts.$background-color;
+    background-color: $background-color;
 
     a{
         text-decoration: inherit; 
@@ -15,7 +15,7 @@ body {
     }
 
     h2{
-        @include dimension(100%);
+        @include dimension(100%, auto);
         @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text);
         @include d-Flex(center, flex-start, column);
     }
@@ -40,7 +40,7 @@ main {
     }
 
     .function-box{
-        @include dimension(100%);
+        @include dimension(100%, auto);
         @include d-Flex(center, center);
         @include margin(26px);
         position: relative; // Doit toujours être présent dans la div parent pour avoir une action sur la div enfant.
@@ -66,7 +66,7 @@ main {
         }
         
         article{
-            @include dimension(100%);
+            @include dimension(100%, auto);
             position: relative;
         }
         
@@ -99,13 +99,13 @@ main {
     }
 
     .container-function{
-        @include dimension(100%); 
+        @include dimension(100%, auto); 
         @include d-Flex(center, center);
         gap: 36px;
     }
 
     .container-places{
-        @include dimension(100%); 
+        @include dimension(100%, auto); 
         flex-wrap: wrap;
         @include d-Flex(space-evenly, center,);
         gap: 24px;
