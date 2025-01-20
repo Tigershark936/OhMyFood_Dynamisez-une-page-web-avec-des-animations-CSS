@@ -77,11 +77,13 @@ main {
         }
         
         .card-restaurants{
+            height: 251px;
             @include border(15px);  
             @include shadow($shadows: 0px 4px 15px 0px #0000001A);
             margin-bottom: 16px;
 
             img{
+                @include dimension(100%, 174px);
                 border-radius: 15px 15px 0 0;
             }
         }
@@ -111,12 +113,13 @@ main {
     .container-places{
         @include dimension(100%, auto); 
         flex-wrap: wrap;
-        @include d-Flex(space-evenly, center,);
-        gap: 24px;
+        @include d-Flex(space-between, center);
+        gap: 50px;
     }
 
     article{
-        max-width: 48%;
+        height: 251px;
+        max-width: 45%;
     }
 }
 

@@ -30,7 +30,7 @@ header{
         background-color: #EAEAEA;
         @include d-Flex(center, center, row);
         gap: 17px;
-        @include textStyle(500, $font-text);
+        @include textStyle(500, normal, $font-text);
         @include dimension(100%, 50px);
         @include shadow($shadows: 0px 4px 4px 0px #00000040);
     }

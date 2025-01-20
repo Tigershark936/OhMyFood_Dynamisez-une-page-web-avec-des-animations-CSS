@@ -80,10 +80,18 @@ main{
     main{
         @include margin(-32px, 100px, 0, 100px);
         position: relative;
+
+        .entries, .dish, .dessert{
+            @include padding(0, 100px, 40px, 100px);
+        }
     }
 }
 
 @media (min-width: 1024px) {
+
+    body{
+        max-width: 1440px;
+    }
 
     header{
         nav{
@@ -112,7 +120,7 @@ main{
         }
 
         .entries, .dish, .dessert{
-            @include margin(0, 210px, 40px, 210px);
+            @include padding(0, 210px, 40px, 210px);
         }
     }
 }

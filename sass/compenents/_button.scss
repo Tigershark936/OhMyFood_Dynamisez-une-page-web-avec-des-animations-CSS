@@ -12,6 +12,7 @@
 }
 
 .btn-function{
+    gap: 20px;
     @include dimension(100%, 72.38px);
     background: $secondary-background-color;
     color: black; 
