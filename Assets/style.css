@@ -148,7 +148,7 @@ header address {
   flex-direction: row;
   gap: 17px;
   font-weight: 500;
-  font-style: normal;
+  font-style: "Roboto", serif;
   font-size: 1rem;
   font-family: "Roboto", serif;
   color: #000;
@@ -179,7 +179,7 @@ footer {
   height: 186px;
   font-weight: 500;
   font-style: normal;
-  font-size: 1rem;
+  font-size: "Roboto", serif;
   font-family: "Roboto", serif;
   color: #FFFFFF;
   padding-top: 22px;
@@ -333,6 +333,9 @@ main .places .card-restaurants {
   border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   margin-bottom: 16px;
+}
+main .places .card-restaurants img {
+  border-radius: 15px 15px 0 0;
 }
 main .places .card-info {
   display: flex;

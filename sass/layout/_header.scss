@@ -5,13 +5,13 @@ header{
     text-align: center;
     
     h1{
-        @include textStyle(700, normal, 1.5rem, $fontFamily:$font-text);
+        @include textStyle(700, normal, 1.5rem, $font-text);
         @include padding(39.5px, 58px, 0, 42px);
         margin-bottom: 10px;
     }
     
     p{
-        @include textStyle(300, normal, 1.125rem, $fontFamily:$font-text);
+        @include textStyle(300, normal, 1.125rem, $font-text);
         @include padding(0, 26px, 27px, 34px);
     }
     
@@ -29,7 +29,7 @@ header{
         background-color: #EAEAEA;
         @include d-Flex(center, center, row);
         gap: 17px;
-        @include textStyle(500, $fontFamily:$font-text);
+        @include textStyle(500, $font-text);
         @include dimension(100%, 50px);
         @include shadow($shadows: 0px 4px 4px 0px #00000040);
     }

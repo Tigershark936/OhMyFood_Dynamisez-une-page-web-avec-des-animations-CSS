@@ -1,0 +1,85 @@
+@import '../abstracts/_variables.scss';
+@import '../abstracts/_mixin.scss';
+@import '../base/_reset.scss';
+@import '../compenents/_button.scss';
+@import '../layout/_footer.scss';
+
+
+header{
+    nav{
+        background-color: $background-color;
+        @include dimension(100%, 63px);
+        @include d-Flex(center, center);
+
+        img{
+            @include dimension(196px, 36px);
+        }
+    }
+
+    .picture{
+        @include dimension(100%, 275px);
+    }
+}
+
+main{
+    background-color: $secondary-background-color;
+    // @include margin(-30px);
+    border-radius: 40px 40px 0 0;
+
+    h1{
+        @include textStyle(400, italic, 1.75rem, $font-title);
+    }
+
+    h2{
+        @include textStyle(300, normal, 1rem, $font-text);
+        border-bottom: 3px solid $tertiary-color;
+    }
+}
+
+.title-card{
+    @include d-Flex(space-between, center);
+    @include padding(32px, 17px, 40px, 17px);
+}
+
+.entries, .dish, .dessert{
+    @include d-Flex(center, flex-start, column);
+    gap: 12px;
+    @include margin(0, 13px, 40px, 13px);
+}
+
+.commandant{
+    @include d-Flex(center, center);
+    @include padding(0px, 0, 40px, 0);
+}
+
+@media (min-width: 768px) {
+
+    main{
+        @include margin(0px, 100px, 0, 100px);
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header{
+        nav{
+            @include dimension(100%, 96.34px);
+        }
+        .picture{
+            @include dimension(100%, 383px);
+        }
+    }
+
+    main{
+        @include margin(0px, 192px, 0, 192px);
+
+        .title-card{
+            @include d-Flex(center, center);
+            gap: 24px;
+        }
+
+        .entries, .dish, .dessert{
+            @include margin(0, 210px, 40px, 210px);
+        }
+    }
+}

@@ -1,0 +1,267 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+.btn {
+  width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  color: #FFFFFF;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-function {
+  width: 100%;
+  height: 72.38px;
+  background: #F6F6F6;
+  color: black;
+  border-radius: 20px;
+  border: none;
+}
+
+.btn-card {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 13.5px;
+  padding-right: 13.5px;
+  padding-bottom: 13.5px;
+  padding-left: 15px;
+  background: #FFFFFF;
+  color: #000;
+  border-radius: 15.04px;
+  border: none;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 186px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: "Roboto", serif;
+  font-family: "Roboto", serif;
+  color: #FFFFFF;
+  padding-top: 22px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+}
+footer a {
+  text-decoration: inherit;
+  color: inherit;
+}
+footer .footer-title {
+  width: 139px;
+  height: 27px;
+}
+footer .footer-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 11px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    width: 100%;
+    height: 114px;
+    background-color: #353535;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+  }
+  footer .footer-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+  footer .footer-party {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 7px;
+  }
+}
+header nav {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header nav img {
+  width: 196px;
+  height: 36px;
+}
+header .picture {
+  width: 100%;
+  height: 275px;
+}
+
+main {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+}
+main h1 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.75rem;
+  font-family: "Shrikhand", serif;
+  color: #000;
+}
+main h2 {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  color: #000;
+  border-bottom: 3px solid #99e2d0;
+}
+
+.title-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 32px;
+  padding-right: 17px;
+  padding-bottom: 40px;
+  padding-left: 17px;
+}
+
+.entries, .dish, .dessert {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 0;
+  margin-right: 13px;
+  margin-bottom: 40px;
+  margin-left: 13px;
+}
+
+.commandant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 0px;
+  padding-right: 0;
+  padding-bottom: 40px;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 0px;
+    margin-right: 100px;
+    margin-bottom: 0;
+    margin-left: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  header nav {
+    width: 100%;
+    height: 96.34px;
+  }
+  header .picture {
+    width: 100%;
+    height: 383px;
+  }
+  main {
+    margin-top: 0px;
+    margin-right: 192px;
+    margin-bottom: 0;
+    margin-left: 192px;
+  }
+  main .title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+  }
+  main .entries, main .dish, main .dessert {
+    margin-top: 0;
+    margin-right: 210px;
+    margin-bottom: 40px;
+    margin-left: 210px;
+  }
+}
+
+/*# sourceMappingURL=restaurants.css.map */

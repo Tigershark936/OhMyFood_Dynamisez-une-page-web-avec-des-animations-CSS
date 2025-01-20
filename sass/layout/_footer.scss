@@ -1,8 +1,13 @@
 footer{
     background-color: $footer-background-color;
     @include dimension(100%, 186px);
-    @include textStyle(500, normal, $fontFamily:$font-text, $color:$background-color);
+    @include textStyle(500, normal, $font-text, $color:$background-color);
     @include padding(22px, 25px,22px, 25px);
+
+    a{
+        text-decoration: inherit; 
+        color: inherit;
+    }
     
     .footer-title{
         @include dimension(139px, 27px);
