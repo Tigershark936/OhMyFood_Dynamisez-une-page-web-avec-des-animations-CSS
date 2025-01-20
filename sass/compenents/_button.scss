@@ -1,7 +1,6 @@
 .btn{
     @include dimension(218px, 50px);
     @include d-Flex(center, center, row);
-    gap: 20px;
     background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
     @include textStyle(500, $fontFamily: $font-text, $color: $background-color);
     @include border(25px, none);
@@ -21,7 +20,7 @@
 
 .btn-card{
     @include dimension(100%, 72px);
-    @include d-Flex(space-between, center);
+    @include d-Flex(space-between, flex-end);
     @include padding(13.5px, 13.5px, 13.5px, 15px);
     background: $background-color;
     color: #000;

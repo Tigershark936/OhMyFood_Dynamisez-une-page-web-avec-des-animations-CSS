@@ -56,7 +56,6 @@ td, th {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 20px;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   font-weight: 500;
   font-style: normal;
@@ -85,7 +84,7 @@ td, th {
   height: 72px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
   padding-top: 13.5px;
   padding-right: 13.5px;
@@ -162,10 +161,18 @@ header nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: relative;
+}
+header nav svg {
+  position: absolute;
+  left: -1px;
+  top: 17px;
+  margin-left: 17px;
 }
 header nav img {
   width: 196px;
   height: 36px;
+  object-fit: contain;
 }
 header .picture {
   width: 100%;
@@ -174,6 +181,11 @@ header .picture {
 
 main {
   background-color: #F6F6F6;
+  margin-top: -32px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  position: relative;
   border-radius: 40px 40px 0 0;
 }
 main h1 {
@@ -190,6 +202,20 @@ main h2 {
   font-family: "Roboto", serif;
   color: #000;
   border-bottom: 3px solid #99e2d0;
+}
+main h3 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125rem;
+  font-family: "Roboto", serif;
+  color: #000;
+}
+main p {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.963rem;
+  font-family: "Roboto", serif;
+  color: #000;
 }
 
 .title-card {
@@ -215,6 +241,15 @@ main h2 {
   margin-left: 13px;
 }
 
+.price p {
+  text-align: end;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.936rem;
+  font-family: "Roboto", serif;
+  color: #000;
+}
+
 .commandant {
   display: flex;
   justify-content: center;
@@ -228,10 +263,11 @@ main h2 {
 
 @media (min-width: 768px) {
   main {
-    margin-top: 0px;
+    margin-top: -32px;
     margin-right: 100px;
     margin-bottom: 0;
     margin-left: 100px;
+    position: relative;
   }
 }
 @media (min-width: 1024px) {
@@ -239,15 +275,22 @@ main h2 {
     width: 100%;
     height: 96.34px;
   }
+  header nav svg {
+    position: absolute;
+    left: -1px;
+    top: 33px;
+    margin-left: 17px;
+  }
   header .picture {
     width: 100%;
     height: 383px;
   }
   main {
-    margin-top: 0px;
+    margin-top: -32px;
     margin-right: 192px;
     margin-bottom: 0;
     margin-left: 192px;
+    position: relative;
   }
   main .title-card {
     display: flex;

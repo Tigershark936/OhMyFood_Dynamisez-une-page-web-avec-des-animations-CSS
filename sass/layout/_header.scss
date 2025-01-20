@@ -23,6 +23,7 @@ header{
     
     img{
         @include dimension(196px, 36px);
+        object-fit: contain;
     }
     
     address{
