@@ -27,13 +27,39 @@
     color: #000;
     @include border(15.04px, none);
     @include shadow($shadows:0px 4.01px 15.04px 0px #0000001A);
-    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // position: relative;
 }
 
-.btn-card::after{
-    content: "";
+// .btn-card::after{
+//     content: '';
+//     width: 0%;
+//     height: 0%;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     z-index: -1;
+//     transition: width 1000ms;
+// }
+
+// .btn-card:hover::after{
+//     content: "✓";
+//     color: white;
+//     background-color: $tertiary-color;
+//     width: 59px;
+//     height: 69px;
+// }
+
+.check{
+    position: relative; 
+    text-align: center;
     width: 0%;
     height: 0%;
+}
+
+.check::after{
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -41,9 +67,9 @@
     transition: width 1000ms;
 }
 
-.btn-card:active::after{
-    content: "✓";
-    color: white;
+.check:hover::after{
+    content: '';
+    color: $tertiary-color;
     background-color: $tertiary-color;
     width: 59px;
     height: 69px;

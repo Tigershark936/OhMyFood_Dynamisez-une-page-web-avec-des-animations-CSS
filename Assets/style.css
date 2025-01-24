@@ -275,6 +275,9 @@ body h2 {
   align-items: flex-start;
   flex-direction: column;
 }
+body .fa-regular {
+  font-size: 22px;
+}
 
 main .function {
   padding-top: 48px;

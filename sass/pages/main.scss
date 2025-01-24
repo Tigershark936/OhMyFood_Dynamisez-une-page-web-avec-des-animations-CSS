@@ -19,6 +19,11 @@ body {
         @include textStyle(700, normal, 1.5rem, $font-text);
         @include d-Flex(center, flex-start, column);
     }
+
+    .fa-regular{
+        font-size: 22px;
+        cursor: pointer;
+    }
 }
 
 main {
