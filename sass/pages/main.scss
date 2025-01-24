@@ -77,13 +77,12 @@ main {
         }
         
         .card-restaurants{
-            height: 251px;
             @include border(15px);  
             @include shadow($shadows: 0px 4px 15px 0px #0000001A);
             margin-bottom: 16px;
 
             img{
-                @include dimension(100%, 174px);
+                @include dimension(100%, auto);
                 border-radius: 15px 15px 0 0;
             }
         }
@@ -118,7 +117,6 @@ main {
     }
 
     article{
-        height: 251px;
         max-width: 45%;
     }
 }
@@ -137,7 +135,12 @@ main {
 
         .places{
             @include padding(30px, 180px, 30px, 180px);
+            
+            .card-restaurants img{
+                @include dimension(100%, 174px);
+            }
         }
+
     }
 
     .footer-party{
