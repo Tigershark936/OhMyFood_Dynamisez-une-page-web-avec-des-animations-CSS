@@ -2,6 +2,7 @@
 @import '../abstracts/_mixin.scss';
 @import '../base/_reset.scss';
 @import '../compenents/_button.scss';
+@import '../compenents/svg';
 @import '../compenents/loader';
 @import '../layout/_header.scss';
 @import '../layout/_footer.scss';
@@ -82,6 +83,13 @@ main {
             top: 8px;
         }
         
+        .fa-heart{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            z-index: 10;
+        }
+        
         .card-restaurants{
             @include border(15px);  
             @include shadow($shadows: 0px 4px 15px 0px #0000001A);
@@ -145,8 +153,14 @@ main {
             .card-restaurants img{
                 @include dimension(100%, 174px);
             }
-        }
 
+            .fa-heart{
+                position: absolute;
+                right: 25px;
+                bottom: 33px;
+                z-index: 10;
+            }
+        }
     }
 
     .footer-party{

@@ -119,6 +119,15 @@ td, th {
   transition: 600ms ease-in;
 }
 
+.fa-heart {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.fa-heart:hover {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+}
+
 footer {
   background-color: #353535;
   width: 100%;
@@ -238,13 +247,6 @@ main p {
   font-size: 0.963rem;
   font-family: "Roboto", serif;
   color: #000;
-}
-main .heart {
-  font-size: 22px;
-  cursor: pointer;
-}
-main .heart:hover {
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
 .title-card {
