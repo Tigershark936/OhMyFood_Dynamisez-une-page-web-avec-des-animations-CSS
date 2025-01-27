@@ -93,32 +93,113 @@ td, th {
   padding-bottom: 13.5px;
   padding-left: 15px;
   background: #FFFFFF;
-  color: #000;
+  font-size: 20px;
   border-radius: 15.04px;
   border: none;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  overflow: hidden;
   position: relative;
 }
 
-.btn-card::after {
-  content: "";
-  width: 0%;
-  height: 0%;
+.btn-card::before {
   position: absolute;
+  content: "";
+  background: #99e2d0;
   top: 0;
-  right: 0;
-  z-index: -1;
-  transition: width 1000ms;
-}
-
-.btn-card:active::after {
-  content: "✓";
-  color: white;
-  background-color: #99e2d0;
-  width: 59px;
+  right: -60px;
   height: 69px;
+  width: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.btn-card:hover::before {
+  right: 0;
+  width: 20%;
+  transition: 600ms ease-in;
+}
+
+.loader-container {
+  max-width: 1440px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: radial-gradient(#99e2d0, #ff79da, #9356dc);
+  opacity: 0.6;
+  animation: fadeOut 2s ease forwards 3000ms;
+}
+
+.loader-span {
+  display: flex;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 2rem;
+  font-family: "Shrikhand", serif;
+  color: #000;
+}
+
+.circle-loader {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 9px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 2s linear infinite;
+}
+
+.circle-loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #ff79da;
+  animation: spin 3s linear infinite;
+}
+
+.circle-loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #99e2d0;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Entièrement visible */
+  }
+  100% {
+    opacity: 0; /* Complètement invisible */
+    pointer-events: none; /* Désactive les clics après l'animation */
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   width: 100%;
   height: auto;
@@ -277,6 +358,7 @@ body h2 {
 }
 body .fa-regular {
   font-size: 22px;
+  cursor: pointer;
 }
 
 main .function {

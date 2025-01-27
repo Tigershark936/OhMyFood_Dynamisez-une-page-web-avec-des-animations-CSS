@@ -2,6 +2,7 @@
 @import '../abstracts/_mixin.scss';
 @import '../base/_reset.scss';
 @import '../compenents/_button.scss';
+
 @import '../layout/_footer.scss';
 
 
@@ -54,30 +55,13 @@ main{
         @include textStyle(300, normal, 0.963rem);
     }
 
-    .fa-regular{
-        position: relative;
+    .heart{
         font-size: 22px;
         cursor: pointer;
-        overflow: hidden;
     }
-
-    .fa-regular::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 0%;
-        // linear-gradient(to bottom, $primary-color $secondary-color);
-        z-index: -1;
-        transition: height 0.5s ease;
-    }
-
-    .fa-regular:active::after {
-        content: '';
-        background-color: red;
-        width: 100%;
-        height: auto;
+    
+    .heart:hover{
+        background: linear-gradient(to bottom, $primary-color,$secondary-color); 
     }
 }
 
@@ -93,13 +77,23 @@ main{
 }
 
 .card-food{
-    width: 75%;
+    width: 100%;
+
+    &:hover{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+}
+
+.price{
+    display: block;
+    width: 10%;
 }
 
 .price p{
     text-align: end;
     @include textStyle(700, normal, 0.936rem);
-    display: block;
 }
 
 .commandant{

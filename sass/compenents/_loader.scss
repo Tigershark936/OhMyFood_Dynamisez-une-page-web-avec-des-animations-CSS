@@ -1,0 +1,78 @@
+.loader-container{
+    max-width: 1440px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: radial-gradient($tertiary-color, $secondary-color, $primary-color);
+    opacity: 0.6;
+    animation: fadeOut 2s ease forwards 3000ms;
+}
+
+.loader-span{
+    display: flex;
+    @include textStyle(500, italic, 2rem, $font-title);
+}
+
+.circle-loader {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 9px solid transparent;
+    border-top-color: $primary-color;
+    animation: spin 2s linear infinite;
+}
+
+.circle-loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color: $secondary-color;
+    animation: spin 3s linear infinite;
+}
+
+.circle-loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: $tertiary-color;
+    animation: spin 1.5s linear infinite;
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Entièrement visible */
+    }
+    100% {
+        opacity: 0; /* Complètement invisible */
+        pointer-events: none; /* Désactive les clics après l'animation */
+    }
+}
+
+@keyframes spin {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

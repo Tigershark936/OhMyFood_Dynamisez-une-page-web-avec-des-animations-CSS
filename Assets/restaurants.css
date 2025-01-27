@@ -92,36 +92,31 @@ td, th {
   padding-bottom: 13.5px;
   padding-left: 15px;
   background: #FFFFFF;
-  color: #000;
+  font-size: 20px;
   border-radius: 15.04px;
   border: none;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.check {
   position: relative;
-  text-align: center;
-  width: 0%;
-  height: 0%;
 }
 
-.check::after {
-  content: "";
+.btn-card::before {
   position: absolute;
+  content: "";
+  background: #99e2d0;
   top: 0;
-  right: 0;
-  z-index: -1;
-  transition: width 1000ms;
+  right: -60px;
+  height: 69px;
+  width: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.check:hover::after {
-  content: "";
-  color: #99e2d0;
-  background-color: #99e2d0;
-  width: 59px;
-  height: 69px;
+.btn-card:hover::before {
+  right: 0;
+  width: 20%;
+  transition: 600ms ease-in;
 }
 
 footer {
@@ -244,27 +239,12 @@ main p {
   font-family: "Roboto", serif;
   color: #000;
 }
-main .fa-regular {
-  position: relative;
+main .heart {
   font-size: 22px;
   cursor: pointer;
-  overflow: hidden;
 }
-main .fa-regular::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 0%;
-  z-index: -1;
-  transition: height 0.5s ease;
-}
-main .fa-regular:active::after {
-  content: "";
-  background-color: red;
-  width: 100%;
-  height: auto;
+main .heart:hover {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
 .title-card {
@@ -291,7 +271,17 @@ main .fa-regular:active::after {
 }
 
 .card-food {
-  width: 75%;
+  width: 100%;
+}
+.card-food:hover {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  display: block;
+  width: 10%;
 }
 
 .price p {
@@ -301,7 +291,6 @@ main .fa-regular:active::after {
   font-size: 0.936rem;
   font-family: "Roboto", serif;
   color: #000;
-  display: block;
 }
 
 .commandant {

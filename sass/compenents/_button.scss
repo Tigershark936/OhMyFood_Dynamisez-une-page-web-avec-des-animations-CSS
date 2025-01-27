@@ -24,53 +24,28 @@
     @include d-Flex(space-between, flex-end);
     @include padding(13.5px, 13.5px, 13.5px, 15px);
     background: $background-color;
-    color: #000;
+    font-size: 20px;
     @include border(15.04px, none);
     @include shadow($shadows:0px 4.01px 15.04px 0px #0000001A);
     overflow: hidden;
-    text-overflow: ellipsis;
-    // position: relative;
+    position: relative;
 }
 
-// .btn-card::after{
-//     content: '';
-//     width: 0%;
-//     height: 0%;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     z-index: -1;
-//     transition: width 1000ms;
-// }
-
-// .btn-card:hover::after{
-//     content: "✓";
-//     color: white;
-//     background-color: $tertiary-color;
-//     width: 59px;
-//     height: 69px;
-// }
-
-.check{
-    position: relative; 
-    text-align: center;
-    width: 0%;
-    height: 0%;
-}
-
-.check::after{
-    content: '';
+.btn-card::before{
     position: absolute;
+    content: "";
+    background: $tertiary-color;
     top: 0;
-    right: 0;
-    z-index: -1;
-    transition: width 1000ms;
+    right: -60px;
+    height: 69px;
+    width: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.check:hover::after{
-    content: '';
-    color: $tertiary-color;
-    background-color: $tertiary-color;
-    width: 59px;
-    height: 69px;
+.btn-card:hover::before{
+    right: 0;
+    width: 20%;
+    transition: 600ms ease-in;
 }
