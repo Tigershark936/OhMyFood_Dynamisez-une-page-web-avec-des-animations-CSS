@@ -233,6 +233,7 @@ main h2 {
   font-family: "Roboto", serif;
   color: #000;
   border-bottom: 3px solid #99e2d0;
+  width: 11.5%;
 }
 main h3 {
   font-weight: 500;
@@ -345,6 +346,9 @@ main p {
     margin-bottom: 0;
     margin-left: 192px;
     position: relative;
+  }
+  main h2 {
+    width: 6.5%;
   }
   main .title-card {
     display: flex;

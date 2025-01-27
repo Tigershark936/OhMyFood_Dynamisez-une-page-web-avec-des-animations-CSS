@@ -45,6 +45,7 @@ main{
     h2{
         @include textStyle(300, normal, 1rem,);
         border-bottom: 3px solid $tertiary-color;
+        width: 11.5%;
     }
 
     h3{
@@ -130,6 +131,11 @@ main{
     main{
         @include margin(-32px, 192px, 0, 192px);
         position: relative;
+
+        h2{
+            width: 6.5%;
+        }
+    
 
         .title-card{
             @include d-Flex(center, center);
