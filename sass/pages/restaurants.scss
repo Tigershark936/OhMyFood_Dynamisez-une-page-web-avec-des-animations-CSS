@@ -62,29 +62,55 @@ main{
     @include padding(32px, 17px, 40px, 17px);
 }
 
-.entries, .dish, .dessert{
+.entries, .dish, .dessert {
     @include d-Flex(center, flex-start, column);
     gap: 12px;
     @include margin(0, 13px, 40px, 13px);
+    animation: slide 4000ms cubic-bezier(0.77, 0.01, 0.49, 1.71) forwards;
+    opacity: 0;
+    transform: translateX(200px); 
 }
 
-.card-food{
-    width: 100%;
+.entries {
+    animation-delay: 0.75s;
+}
 
-    &:hover{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.dish {
+    animation-delay: 1.5s;
+}
+
+.dessert {
+    animation-delay: 2.25s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateZ(-500px);
+        opacity: 0;
+        scale: (0.5);
+    }
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+        scale: (1);
     }
 }
 
+
+.card-info{
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .price{
-    display: block;
-    width: 10%;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .price p{
-    text-align: end;
     @include textStyle(700, normal, 0.936rem);
 }
 

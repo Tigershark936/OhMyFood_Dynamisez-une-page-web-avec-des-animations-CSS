@@ -6,3 +6,25 @@
 .fa-heart:hover{
     background: linear-gradient(to bottom, $primary-color,$secondary-color); 
 }
+
+.check-box{
+    @include d-Flex(center, center);
+    background-color: $tertiary-color;
+    width: 0px;
+    height: 0px;
+    position: relative;
+}
+
+.check-box::before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 69px;
+    top: 0;
+    right: 0;
+}
+
+.check-box:hover::before{
+    width: 59px;
+    transition: 600ms ease-in;
+}
