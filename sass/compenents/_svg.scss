@@ -4,7 +4,8 @@
     transition: color 0.3s ease-in-out;
 }
 
-.fa-heart:hover:checked{
+// :checked
+.fa-heart:hover{
     background: linear-gradient(to bottom, $primary-color,$secondary-color); 
 }
 

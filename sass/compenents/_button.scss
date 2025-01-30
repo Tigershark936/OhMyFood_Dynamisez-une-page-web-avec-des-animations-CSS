@@ -5,14 +5,16 @@
     background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
     @include textStyle(500, $fontFamily: $font-text, $color: $background-color);
     @include border(25px, none);
-    @include shadow($shadows: 0px 4px 10px 0px #00000040);
+    @include shadow($shadows: 0px 4px 10px 0px rgba(0, 0, 0, 0.26));
 
     &:hover{
         opacity: 0.8;
+        @include shadow($shadows: 0px 4px 10px 0px rgba(0, 0, 0, 0.70));
     }
 }
 
 .btn-function{
+    @include d-Flex(center, center, row);
     gap: 20px;
     @include dimension(100%, 72.38px);
     background: $secondary-background-color;
