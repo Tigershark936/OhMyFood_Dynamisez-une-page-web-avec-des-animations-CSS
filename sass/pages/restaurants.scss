@@ -104,17 +104,13 @@ main{
 
 .info{
     @include d-Flex(center, flex-start, column);
-
-    h3, p{
-        display: block;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .price{
-    margin-right: -49px;
+    margin-right: -35px;
     transition: all 0.5s ease-in-out;
 
     p{

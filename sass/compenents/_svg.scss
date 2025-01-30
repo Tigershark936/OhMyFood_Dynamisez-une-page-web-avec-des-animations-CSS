@@ -16,4 +16,22 @@
     top: 0;
     transform: translateX(69px);
     transition: all 0.5s ease-in-out;
+
+    &.btn-card {
+        transform: translateX(0);
+
+        .fa-circle-check {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+.fa-circle-check{
+    transition: all 1s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.fa-circle-check:hover{
+    transform: rotate(-360deg);
 }

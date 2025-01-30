@@ -89,7 +89,7 @@ td, th {
   align-items: center;
   flex-direction: row;
   padding-top: 13.5px;
-  padding-right: 13.5px;
+  padding-right: 0;
   padding-bottom: 13.5px;
   padding-left: 15px;
   background: #FFFFFF;
@@ -134,6 +134,21 @@ td, th {
   top: 0;
   transform: translateX(69px);
   transition: all 0.5s ease-in-out;
+}
+.check-box.btn-card {
+  transform: translateX(0);
+}
+.check-box.btn-card .fa-circle-check {
+  transform: rotate(360deg);
+}
+
+.fa-circle-check {
+  transition: all 1s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.fa-circle-check:hover {
+  transform: rotate(-360deg);
 }
 
 footer {
@@ -322,16 +337,13 @@ main p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-}
-.info h3, .info p {
-  display: block;
-  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price {
-  margin-right: -49px;
+  margin-right: -35px;
   transition: all 0.5s ease-in-out;
 }
 .price p {

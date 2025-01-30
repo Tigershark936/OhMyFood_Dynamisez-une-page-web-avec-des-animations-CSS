@@ -24,7 +24,7 @@
 .btn-card{
     @include dimension(100%, 69px);
     @include d-Flex(flex-start, center);
-    @include padding(13.5px, 13.5px, 13.5px, 15px);
+    @include padding(13.5px, 0, 13.5px, 15px);
     background: $background-color;
     font-size: 20px;
     @include border(15.04px, none);
