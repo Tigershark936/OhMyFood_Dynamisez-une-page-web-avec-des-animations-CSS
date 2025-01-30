@@ -24,7 +24,6 @@
 .btn-card{
     @include dimension(100%, 69px);
     @include d-Flex(flex-start, center);
-    gap: 5px;
     @include padding(13.5px, 13.5px, 13.5px, 15px);
     background: $background-color;
     font-size: 20px;
@@ -34,21 +33,14 @@
     overflow: hidden;
 }
 
-.btn-card::before{
-    position: absolute;
-    content: "";
-    background: $tertiary-color;
-    top: 0;
-    right: -60px;
-    height: 69px;
-    width: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-card:hover > .card-food > .info {
+    width: calc(100% - 69px);
 }
 
-.btn-card:hover::before{
-    right: 0;
-    width: 59px;
-    transition: 600ms ease-in;
+.btn-card:hover > .card-food > .price {
+    transform: translateX(-69px);
+}
+
+.btn-card:hover > .check-box {
+    transform: translateX(0px);
 }

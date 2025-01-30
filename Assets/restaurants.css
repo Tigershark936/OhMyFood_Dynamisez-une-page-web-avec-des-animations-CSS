@@ -88,7 +88,6 @@ td, th {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  gap: 5px;
   padding-top: 13.5px;
   padding-right: 13.5px;
   padding-bottom: 13.5px;
@@ -102,23 +101,16 @@ td, th {
   overflow: hidden;
 }
 
-.btn-card::before {
-  position: absolute;
-  content: "";
-  background: #99e2d0;
-  top: 0;
-  right: -60px;
-  height: 69px;
-  width: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn-card:hover > .card-food > .info {
+  width: calc(100% - 69px);
 }
 
-.btn-card:hover::before {
-  right: 0;
-  width: 59px;
-  transition: 600ms ease-in;
+.btn-card:hover > .card-food > .price {
+  transform: translateX(-69px);
+}
+
+.btn-card:hover > .check-box {
+  transform: translateX(0px);
 }
 
 .fa-heart {
@@ -127,7 +119,7 @@ td, th {
   transition: color 0.3s ease-in-out;
 }
 
-.fa-heart:checked {
+.fa-heart:hover:checked {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
@@ -139,23 +131,9 @@ td, th {
   background-color: #99e2d0;
   width: 59px;
   height: 69px;
-  position: relative;
-  right: -80px;
   top: 0;
-}
-
-.check-box::before {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 69px;
-  top: 0;
-}
-
-.check-box:hover::before {
-  right: 80px;
-  width: 59px;
-  transition: 600ms ease-in;
+  transform: translateX(69px);
+  transition: all 0.5s ease-in-out;
 }
 
 footer {
@@ -330,18 +308,32 @@ main p {
     scale: 1;
   }
 }
-.card-info {
-  width: 80%;
-  white-space: nowrap;
+.card-food {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.info h3, .info p {
+  display: block;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .price {
-  width: 20%;
-  display: flex;
-  align-items: flex-end;
+  margin-right: -49px;
+  transition: all 0.5s ease-in-out;
 }
-
 .price p {
   font-weight: 700;
   font-style: normal;
