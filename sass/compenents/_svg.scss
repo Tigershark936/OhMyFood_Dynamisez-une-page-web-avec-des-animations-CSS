@@ -1,18 +1,21 @@
 .fa-heart{  
     font-size: 22px;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
-.fa-heart:hover{
+.fa-heart:checked{
     background: linear-gradient(to bottom, $primary-color,$secondary-color); 
 }
 
 .check-box{
     @include d-Flex(center, center);
     background-color: $tertiary-color;
-    width: 0px;
-    height: 0px;
+    width: 59px;
+    height: 69px;
     position: relative;
+    right: -80px;
+    top: 0;
 }
 
 .check-box::before{
@@ -21,10 +24,10 @@
     width: 0px;
     height: 69px;
     top: 0;
-    right: 0;
 }
 
 .check-box:hover::before{
+    right: 80px;
     width: 59px;
     transition: 600ms ease-in;
 }

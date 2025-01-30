@@ -85,7 +85,7 @@ td, th {
   width: 100%;
   height: 69px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   gap: 5px;
@@ -124,9 +124,10 @@ td, th {
 .fa-heart {
   font-size: 22px;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
-.fa-heart:hover {
+.fa-heart:checked {
   background: linear-gradient(to bottom, #9356dc, #ff79da);
 }
 
@@ -136,9 +137,11 @@ td, th {
   align-items: center;
   flex-direction: row;
   background-color: #99e2d0;
-  width: 0px;
-  height: 0px;
+  width: 59px;
+  height: 69px;
   position: relative;
+  right: -80px;
+  top: 0;
 }
 
 .check-box::before {
@@ -147,10 +150,10 @@ td, th {
   width: 0px;
   height: 69px;
   top: 0;
-  right: 0;
 }
 
 .check-box:hover::before {
+  right: 80px;
   width: 59px;
   transition: 600ms ease-in;
 }
@@ -304,15 +307,15 @@ main p {
 }
 
 .entries {
-  animation-delay: 0.75s;
+  animation-delay: 0.5s;
 }
 
 .dish {
-  animation-delay: 1.5s;
+  animation-delay: 1.25s;
 }
 
 .dessert {
-  animation-delay: 2.25s;
+  animation-delay: 2s;
 }
 
 @keyframes slide {
@@ -336,7 +339,6 @@ main p {
 .price {
   width: 20%;
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
 }
 

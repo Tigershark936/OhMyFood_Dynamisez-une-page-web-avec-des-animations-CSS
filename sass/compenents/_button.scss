@@ -18,11 +18,12 @@
     background: $secondary-background-color;
     color: black; 
     @include border(20px);
+
 }
 
 .btn-card{
     @include dimension(100%, 69px);
-    @include d-Flex(space-between, center);
+    @include d-Flex(flex-start, center);
     gap: 5px;
     @include padding(13.5px, 13.5px, 13.5px, 15px);
     background: $background-color;

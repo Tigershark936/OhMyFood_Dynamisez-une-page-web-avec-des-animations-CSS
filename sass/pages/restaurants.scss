@@ -72,15 +72,15 @@ main{
 }
 
 .entries {
-    animation-delay: 0.75s;
+    animation-delay: 0.5s;
 }
 
 .dish {
-    animation-delay: 1.5s;
+    animation-delay: 1.25s;
 }
 
 .dessert {
-    animation-delay: 2.25s;
+    animation-delay: 2s;
 }
 
 @keyframes slide {
@@ -106,7 +106,6 @@ main{
 .price{
     width: 20%;
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
 }
 
