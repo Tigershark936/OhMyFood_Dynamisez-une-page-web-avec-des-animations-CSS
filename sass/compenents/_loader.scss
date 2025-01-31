@@ -1,11 +1,10 @@
 .loader-container{
     height: 100%;
     width: 100%;
+    max-width: 1440px; // Empêche qu'il dépasse 1440px
     position: fixed;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include d-Flex(center, center, column);
     z-index: 100;
     background: radial-gradient($tertiary-color, $secondary-color, $primary-color);
     opacity: 0.6;
@@ -13,7 +12,9 @@
 }
 
 .loader-span{
+    width: 100%;
     display: flex;
+    @include d-Flex(center, center);
     @include textStyle(500, italic, 2rem, $font-title);
 }
 

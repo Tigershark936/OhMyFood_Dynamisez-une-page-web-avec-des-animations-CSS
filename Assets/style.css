@@ -137,22 +137,32 @@ td, th {
   align-items: center;
   flex-direction: row;
   position: relative;
-  top: 0;
-  right: 0;
   overflow: hidden;
 }
 
 .heart-empty {
   position: absolute;
-  font-size: large;
   cursor: pointer;
   z-index: 2;
   color: linear-gradient(to bottom, #9356dc, #ff79da);
   overflow: hidden;
 }
 
+.heart-empty:active {
+  opacity: 1;
+}
+
 .heart-fill {
-  font-size: large;
+  position: absolute;
+  color: transparent;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.heart-fill:active {
+  color: red;
+  opacity: 0;
 }
 
 .check-box {
@@ -170,32 +180,31 @@ td, th {
 .check-box.btn-card {
   transform: translateX(0);
 }
-.check-box.btn-card .fa-circle-check {
-  transform: rotate(360deg);
-}
 
 .fa-circle-check {
   color: #FFFFFF;
   transform: rotate(0deg);
-  animation: check-circle 2s ease-in-out;
+  animation: check-circle 2s ease-in-out forwards;
 }
 
 @keyframes check-circle {
-  100% {
-    rotate: -360deg;
-  }
   0% {
-    rotate: 0deg;
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 .loader-container {
   height: 100%;
   width: 100%;
+  max-width: 1440px;
   position: fixed;
   display: flex;
-  flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 100;
   background: radial-gradient(#99e2d0, #ff79da, #9356dc);
   opacity: 0.6;
@@ -203,7 +212,12 @@ td, th {
 }
 
 .loader-span {
+  width: 100%;
   display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-weight: 500;
   font-style: italic;
   font-size: 2rem;
