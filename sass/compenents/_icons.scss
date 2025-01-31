@@ -1,27 +1,33 @@
 .restaurant-favorite{
     @include d-Flex(center, center);
     position: relative;
-    top: 0;
-    right: 0;
     overflow: hidden;  
 }
 
 .heart-empty{ 
-    position: absolute; 
-    font-size: large;
+    position: absolute;
     cursor: pointer;
     z-index: 2;
     color: linear-gradient(to bottom, $primary-color, $secondary-color);
     overflow: hidden
 }
 
-.heart-fill{
-    font-size: large;
+.heart-empty:active{
+    opacity: 1;
 }
 
+.heart-fill{
+    position: absolute;
+    color: transparent;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
 
-
-
+.heart-fill:active{
+    color: red;
+    opacity: 0;
+}
 
 .check-box{
     @include d-Flex(center, center);

@@ -136,22 +136,32 @@ td, th {
   align-items: center;
   flex-direction: row;
   position: relative;
-  top: 0;
-  right: 0;
   overflow: hidden;
 }
 
 .heart-empty {
   position: absolute;
-  font-size: large;
   cursor: pointer;
   z-index: 2;
   color: linear-gradient(to bottom, #9356dc, #ff79da);
   overflow: hidden;
 }
 
+.heart-empty:active {
+  opacity: 1;
+}
+
 .heart-fill {
-  font-size: large;
+  position: absolute;
+  color: transparent;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.heart-fill:active {
+  color: red;
+  opacity: 0;
 }
 
 .check-box {
