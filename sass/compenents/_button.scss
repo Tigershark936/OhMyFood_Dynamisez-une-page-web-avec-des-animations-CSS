@@ -14,18 +14,32 @@
 }
 
 .btn-function{
-    @include d-Flex(center, center, row);
-    gap: 20px;
     @include dimension(100%, 72.38px);
+    @include d-Flex(center, center, row);
+    cursor: pointer;
+    gap: 20px;
     background: $secondary-background-color;
     color: black; 
     @include border(20px);
-
+    @include shadow($shadows: 0px 4px 10px 0px rgba(0, 0, 0, 0.15));
+   
 }
+
+//Changer l'état du SVG en couleur 
+.btn-function svg path {
+  fill: #7E7E7E; 
+  transition: fill 0.2s ease-in-out;
+}
+
+.btn-function:focus svg path{
+  fill: $primary-color;
+}
+
 
 .btn-card{
     @include dimension(100%, 69px);
     @include d-Flex(flex-start, center);
+    cursor: pointer;
     @include padding(13.5px, 0, 13.5px, 15px);
     background: $background-color;
     font-size: 20px;

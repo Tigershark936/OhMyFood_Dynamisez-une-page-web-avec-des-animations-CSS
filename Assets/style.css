@@ -74,17 +74,28 @@ td, th {
 }
 
 .btn-function {
+  width: 100%;
+  height: 72.38px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
   gap: 20px;
-  width: 100%;
-  height: 72.38px;
   background: #F6F6F6;
   color: black;
   border-radius: 20px;
   border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn-function svg path {
+  fill: #7E7E7E;
+  transition: fill 0.2s ease-in-out;
+}
+
+.btn-function:focus svg path {
+  fill: #9356dc;
 }
 
 .btn-card {
@@ -94,6 +105,7 @@ td, th {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
   padding-top: 13.5px;
   padding-right: 0;
   padding-bottom: 13.5px;
@@ -119,14 +131,28 @@ td, th {
   transform: translateX(0px);
 }
 
-.fa-heart {
-  font-size: 22px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
+.restaurant-favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  top: 0;
+  right: 0;
+  overflow: hidden;
 }
 
-.fa-heart:hover {
-  background: linear-gradient(to bottom, #9356dc, #ff79da);
+.heart-empty {
+  position: absolute;
+  font-size: large;
+  cursor: pointer;
+  z-index: 2;
+  color: linear-gradient(to bottom, #9356dc, #ff79da);
+  overflow: hidden;
+}
+
+.heart-fill {
+  font-size: large;
 }
 
 .check-box {
@@ -149,14 +175,19 @@ td, th {
 }
 
 .fa-circle-check {
-  transition: all 1s ease-in-out;
+  color: #FFFFFF;
   transform: rotate(0deg);
+  animation: check-circle 2s ease-in-out;
 }
 
-.fa-circle-check:hover {
-  transform: rotate(-360deg);
+@keyframes check-circle {
+  100% {
+    rotate: -360deg;
+  }
+  0% {
+    rotate: 0deg;
+  }
 }
-
 .loader-container {
   height: 100%;
   width: 100%;

@@ -1,0 +1,54 @@
+.restaurant-favorite{
+    @include d-Flex(center, center);
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow: hidden;  
+}
+
+.heart-empty{ 
+    position: absolute; 
+    font-size: large;
+    cursor: pointer;
+    z-index: 2;
+    color: linear-gradient(to bottom, $primary-color, $secondary-color);
+    overflow: hidden
+}
+
+.heart-fill{
+    font-size: large;
+}
+
+
+
+
+
+.check-box{
+    @include d-Flex(center, center);
+    background-color: $tertiary-color;
+    width: 59px;
+    height: 69px;
+    top: 0;
+    transform: translateX(69px);
+    transition: all 0.5s ease-in-out;
+
+    &.btn-card {
+        transform: translateX(0);
+    }
+}
+
+
+.fa-circle-check{
+    color: $background-color;
+    transform: rotate(0deg);
+    animation: check-circle 2s ease-in-out forwards;
+}
+
+@keyframes check-circle{
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
