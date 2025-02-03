@@ -1,35 +1,34 @@
-.restaurant-favorite{
-    // position: relative;
-    overflow: hidden;  
-}
-
-.icon-empty{ 
+  // ICON HEART //
+.icon-empty {
     position: absolute;
     cursor: pointer;
     font-size: 22px;
     z-index: 2;
-    overflow: hidden;
-    transition: 0.3s ease-in-out;
-}
-
-.icon-empty:hover{
-    color: transparent;
-}
-
-.icon-fill{
-    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    color: black;         
+    background-color: $secondary-background-color;     
+  }
+  
+  .icon-fill {
     cursor: pointer;
     font-size: 22px;
+    z-index: 1; 
+    color: transparent;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    background-clip: text; /* L’arrière-plan ne s'affiche que sur le texte */
+    -webkit-background-clip: text; /* Nécessaire pour Chrome & Safari */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le fond */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; 
+  }
+  
+  .icon-empty:hover {
     opacity: 0;
-    transition: 0.3s ease-in-out;
-}
+  }
 
-.icon-fill:hover{
-    opacity: 1;
-    color: red;
-    // background-color: linear-gradient(0deg, $primary-color, $secondary-color);
-}
 
+
+  // ICON CHECK BOX //
 .check-box{
     @include d-Flex(center, center);
     background-color: $tertiary-color;
@@ -44,18 +43,16 @@
     }
 }
 
-
 .fa-circle-check{
     color: $background-color;
     transform: rotate(0deg);
-    animation: check-circle 2s ease-in-out forwards;
 }
 
 @keyframes check-circle{
     0% {
-        transform: rotate(-360deg);
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-360deg);
     }
 }

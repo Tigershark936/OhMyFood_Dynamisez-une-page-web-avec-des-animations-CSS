@@ -25,7 +25,7 @@
    
 }
 
-//Changer l'état du SVG en couleur 
+//Changer l'état du SVG en couleur //
 .btn-function svg path {
   fill: #7E7E7E; 
   transition: fill 0.2s ease-in-out;
@@ -60,3 +60,7 @@
 .btn-card:hover > .check-box {
     transform: translateX(0px);
 }
+
+.btn-card:hover > .check-box > i {
+    animation: check-circle 1.2s ease-in-out forwards;
+}   

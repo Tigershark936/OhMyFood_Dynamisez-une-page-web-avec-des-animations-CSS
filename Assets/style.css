@@ -131,8 +131,8 @@ td, th {
   transform: translateX(0px);
 }
 
-.restaurant-favorite {
-  overflow: hidden;
+.btn-card:hover > .check-box > i {
+  animation: check-circle 1s ease-in-out forwards;
 }
 
 .icon-empty {
@@ -140,25 +140,27 @@ td, th {
   cursor: pointer;
   font-size: 22px;
   z-index: 2;
-  overflow: hidden;
-  transition: 0.3s ease-in-out;
-}
-
-.icon-empty:hover {
-  color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  color: black;
+  background-color: #F6F6F6;
 }
 
 .icon-fill {
   position: absolute;
   cursor: pointer;
   font-size: 22px;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+  z-index: 1;
+  color: transparent;
+  background: linear-gradient(45deg, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
 
-.icon-fill:hover {
-  opacity: 1;
-  color: red;
+.icon-empty:hover {
+  opacity: 0;
 }
 
 .check-box {
@@ -180,15 +182,14 @@ td, th {
 .fa-circle-check {
   color: #FFFFFF;
   transform: rotate(0deg);
-  animation: check-circle 2s ease-in-out forwards;
 }
 
 @keyframes check-circle {
   0% {
-    transform: rotate(-360deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
 }
 .loader-container {
@@ -433,10 +434,6 @@ body h2 {
   align-items: flex-start;
   flex-direction: column;
 }
-body .fa-regular {
-  font-size: 22px;
-  cursor: pointer;
-}
 
 main .function {
   padding-top: 48px;
@@ -524,7 +521,6 @@ main .places .fa-heart {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  z-index: 10;
 }
 main .places .card-restaurants {
   border-radius: 15px;
@@ -602,7 +598,6 @@ main .places .card-info {
     position: absolute;
     right: 25px;
     bottom: 33px;
-    z-index: 10;
   }
   .footer-party {
     padding-right: 30px;

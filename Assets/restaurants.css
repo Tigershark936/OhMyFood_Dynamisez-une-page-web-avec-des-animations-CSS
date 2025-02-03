@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -130,8 +131,8 @@ td, th {
   transform: translateX(0px);
 }
 
-.restaurant-favorite {
-  overflow: hidden;
+.btn-card:hover > .check-box > i {
+  animation: check-circle 1.2s ease-in-out forwards;
 }
 
 .icon-empty {
@@ -139,25 +140,26 @@ td, th {
   cursor: pointer;
   font-size: 22px;
   z-index: 2;
-  overflow: hidden;
-  transition: 0.3s ease-in-out;
-}
-
-.icon-empty:hover {
-  color: transparent;
+  transition: opacity 0.3s ease-in-out;
+  color: black;
+  background-color: #F6F6F6;
 }
 
 .icon-fill {
-  position: absolute;
   cursor: pointer;
   font-size: 22px;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+  z-index: 1;
+  color: transparent;
+  background: linear-gradient(45deg, #9356dc, #ff79da);
+  background-clip: text; /* L’arrière-plan ne s'affiche que sur le texte */
+  -webkit-background-clip: text; /* Nécessaire pour Chrome & Safari */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le fond */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
 
-.icon-fill:hover {
-  opacity: 1;
-  color: red;
+.icon-empty:hover {
+  opacity: 0;
 }
 
 .check-box {
@@ -179,15 +181,14 @@ td, th {
 .fa-circle-check {
   color: #FFFFFF;
   transform: rotate(0deg);
-  animation: check-circle 2s ease-in-out forwards;
 }
 
 @keyframes check-circle {
   0% {
-    transform: rotate(-360deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(-360deg);
   }
 }
 footer {
