@@ -132,7 +132,7 @@ td, th {
 }
 
 .btn-card:hover > .check-box > i {
-  animation: check-circle 1s ease-in-out forwards;
+  animation: check-circle 1.2s ease-in-out forwards;
 }
 
 .icon-empty {
@@ -146,15 +146,14 @@ td, th {
 }
 
 .icon-fill {
-  position: absolute;
   cursor: pointer;
   font-size: 22px;
   z-index: 1;
   color: transparent;
   background: linear-gradient(45deg, #9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text; /* L’arrière-plan ne s'affiche que sur le texte */
+  -webkit-background-clip: text; /* Nécessaire pour Chrome & Safari */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le fond */
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
@@ -169,7 +168,7 @@ td, th {
   align-items: center;
   flex-direction: row;
   background-color: #99e2d0;
-  width: 59px;
+  min-width: 59px;
   height: 69px;
   top: 0;
   transform: translateX(69px);

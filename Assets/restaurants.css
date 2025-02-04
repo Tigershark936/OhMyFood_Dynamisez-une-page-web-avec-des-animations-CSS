@@ -168,7 +168,7 @@ td, th {
   align-items: center;
   flex-direction: row;
   background-color: #99e2d0;
-  width: 59px;
+  min-width: 59px;
   height: 69px;
   top: 0;
   transform: translateX(69px);
@@ -377,9 +377,17 @@ main p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+}
+.info p, .info h3 {
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-card:hover > .card-food > .info p,
+.btn-card:hover > .card-food > .info h3 {
+  max-width: calc(100% - 5px);
 }
 
 .price {

@@ -32,7 +32,7 @@
 .check-box{
     @include d-Flex(center, center);
     background-color: $tertiary-color;
-    width: 59px;
+    min-width: 59px;
     height: 69px;
     top: 0;
     transform: translateX(69px);

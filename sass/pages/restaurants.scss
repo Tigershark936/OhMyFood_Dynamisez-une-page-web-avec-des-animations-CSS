@@ -6,7 +6,6 @@
 @import '../layout/_footer.scss';
 
 
-
 header{
     nav{
         background-color: $background-color;
@@ -104,10 +103,19 @@ main{
 
 .info{
     @include d-Flex(center, flex-start, column);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+    p, h3{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
 }
+
+.btn-card:hover > .card-food > .info p, 
+.btn-card:hover > .card-food > .info h3 {
+    max-width: calc(100% - 5px);
+} 
 
 .price{
     margin-right: -35px;
