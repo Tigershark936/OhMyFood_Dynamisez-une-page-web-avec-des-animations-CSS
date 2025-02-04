@@ -22,90 +22,86 @@ body {
         @include d-Flex(center, flex-start, column);
     }
 }
+   
+.function{
+    @include padding(48px, 20px, 68px, 20px);
 
-main {
-    
-    .function{
-        @include padding(48px, 20px, 68px, 20px);
-
-        h3{
-            @include textStyle(500, normal, 1rem, $font-text);
-        }
-
-        p{
-            @include textStyle(500, normal, 0.875rem, $fontFamily: $font-text, $color: $background-color);
-            @include border(50%);
-            @include dimension(24px, 24px);
-            background-color: $primary-color;
-            @include d-Flex(center, center);
-        }
+    h3{
+        @include textStyle(500, normal, 1rem, $font-text);
     }
 
-    .function-box{
-        @include dimension(100%, auto);
+    p{
+        @include textStyle(500, normal, 0.875rem, $fontFamily: $font-text, $color: $background-color);
+        @include border(50%);
+        @include dimension(24px, 24px);
+        background-color: $primary-color;
         @include d-Flex(center, center);
-        @include margin(26px);
-        position: relative; // Doit toujours être présent dans la div parent pour avoir une action sur la div enfant.
+    }
+}
+
+.function-box{
+    @include dimension(100%, auto);
+    @include d-Flex(center, center);
+    @include margin(26px);
+    position: relative; // Doit toujours être présent dans la div parent pour avoir une action sur la div enfant.
+}
+
+.number-button{
+    position: absolute; //Doit être positionner dans la div enfant pour pouvoir le déplacer.
+    left: -12px;
+}    
+
+.places{
+    background-color: $secondary-background-color;
+    @include padding(54px, 20px, 50px, 20px);
+    @include d-Flex(center, center, column);
+    gap: 16px;
+
+    h3{
+        @include textStyle(700, normal, 1.125rem, $font-text);
     }
 
-    .number-button{
-        position: absolute; //Doit être positionner dans la div enfant pour pouvoir le déplacer.
-        left: -12px;
+    p{
+        @include textStyle(300, normal, 1.063rem, $font-text);
     }
-    
-    .places{
-        background-color: $secondary-background-color;
-        @include padding(54px, 20px, 50px, 20px);
-        @include d-Flex(center, center, column);
-        gap: 16px;
-    
-        h3{
-            @include textStyle(700, normal, 1.125rem, $font-text);
-        }
-    
-        p{
-            @include textStyle(300, normal, 1.063rem, $font-text);
-        }
-        
-        article{
-            @include dimension(100%, auto);
-            position: relative;
-        }
-        
-        .image-new{
-            position: absolute;
-            right: 5px;
-            top: 8px;
-        }
-        
-        .fa-heart{
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-        }
-        
-        .card-restaurants{
-            @include border(15px);  
-            @include shadow($shadows: 0px 4px 15px 0px #0000001A);
-            margin-bottom: 16px;
+}
 
-            img{
-                @include dimension(100%, auto);
-                border-radius: 15px 15px 0 0;
-            }
-        }
-        
-        .card-info{
-            @include d-Flex(space-between, center);
-            @include padding(16px, 25px, 12px, 13px);
-        }
+article{
+    @include dimension(100%, auto);
+    position: relative;
+}
+
+.card-restaurants{
+    @include border(15px);  
+    @include shadow($shadows: 0px 4px 15px 0px #0000001A);
+    margin-bottom: 16px;
+
+    img{
+        @include dimension(100%, auto);
+        border-radius: 15px 15px 0 0;
     }
+}
+
+.image-new{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+
+.fa-heart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.card-info{
+    @include d-Flex(space-between, center);
+    @include padding(6px, 25px, 12px, 13px);
 }
 
 
 
 @media (min-width: 768px) {
-
 
     .function{
         @include d-Flex(center, center, column);
@@ -127,6 +123,12 @@ main {
     article{
         max-width: 45%;
     }
+
+    .fa-heart{
+        position: absolute;
+        right: 25px;
+        bottom: 33px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -135,25 +137,22 @@ main {
         max-width: 1440px;
     }
 
-    main{
+    .function{
+        @include padding(50px, 207px, 50px, 180px);
+    }
 
-        .function{
-            @include padding(50px, 207px, 50px, 180px);
+    .places{
+        @include padding(30px, 180px, 30px, 180px);
+    }
+
+    .card-restaurants img{
+            @include dimension(100%, 174px);
         }
-
-        .places{
-            @include padding(30px, 180px, 30px, 180px);
-            
-            .card-restaurants img{
-                @include dimension(100%, 174px);
-            }
-
-            .fa-heart{
-                position: absolute;
-                right: 25px;
-                bottom: 33px;
-            }
-        }
+        
+    .fa-heart{
+        position: absolute;
+        right: 25px;
+        bottom: 33px;
     }
 
     .footer-party{

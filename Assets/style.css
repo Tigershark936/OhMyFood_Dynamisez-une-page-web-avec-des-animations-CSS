@@ -434,20 +434,20 @@ body h2 {
   flex-direction: column;
 }
 
-main .function {
+.function {
   padding-top: 48px;
   padding-right: 20px;
   padding-bottom: 68px;
   padding-left: 20px;
 }
-main .function h3 {
+.function h3 {
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
   font-family: "Roboto", serif;
   color: #000;
 }
-main .function p {
+.function p {
   font-weight: 500;
   font-style: normal;
   font-size: 0.875rem;
@@ -463,7 +463,8 @@ main .function p {
   align-items: center;
   flex-direction: row;
 }
-main .function-box {
+
+.function-box {
   width: 100%;
   height: auto;
   display: flex;
@@ -476,11 +477,13 @@ main .function-box {
   margin-left: 0;
   position: relative;
 }
-main .number-button {
+
+.number-button {
   position: absolute;
   left: -12px;
 }
-main .places {
+
+.places {
   background-color: #F6F6F6;
   padding-top: 54px;
   padding-right: 20px;
@@ -492,52 +495,57 @@ main .places {
   flex-direction: column;
   gap: 16px;
 }
-main .places h3 {
+.places h3 {
   font-weight: 700;
   font-style: normal;
   font-size: 1.125rem;
   font-family: "Roboto", serif;
   color: #000;
 }
-main .places p {
+.places p {
   font-weight: 300;
   font-style: normal;
   font-size: 1.063rem;
   font-family: "Roboto", serif;
   color: #000;
 }
-main .places article {
+
+article {
   width: 100%;
   height: auto;
   position: relative;
 }
-main .places .image-new {
-  position: absolute;
-  right: 5px;
-  top: 8px;
-}
-main .places .fa-heart {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-main .places .card-restaurants {
+
+.card-restaurants {
   border-radius: 15px;
   border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   margin-bottom: 16px;
 }
-main .places .card-restaurants img {
+.card-restaurants img {
   width: 100%;
   height: auto;
   border-radius: 15px 15px 0 0;
 }
-main .places .card-info {
+
+.image-new {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+}
+
+.fa-heart {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.card-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding-top: 16px;
+  padding-top: 6px;
   padding-right: 25px;
   padding-bottom: 12px;
   padding-left: 13px;
@@ -572,28 +580,33 @@ main .places .card-info {
   article {
     max-width: 45%;
   }
+  .fa-heart {
+    position: absolute;
+    right: 25px;
+    bottom: 33px;
+  }
 }
 @media (min-width: 1024px) {
   body {
     max-width: 1440px;
   }
-  main .function {
+  .function {
     padding-top: 50px;
     padding-right: 207px;
     padding-bottom: 50px;
     padding-left: 180px;
   }
-  main .places {
+  .places {
     padding-top: 30px;
     padding-right: 180px;
     padding-bottom: 30px;
     padding-left: 180px;
   }
-  main .places .card-restaurants img {
+  .card-restaurants img {
     width: 100%;
     height: 174px;
   }
-  main .places .fa-heart {
+  .fa-heart {
     position: absolute;
     right: 25px;
     bottom: 33px;
