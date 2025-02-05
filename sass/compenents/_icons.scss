@@ -33,9 +33,12 @@
     @include d-Flex(center, center);
     background-color: $tertiary-color;
     min-width: 59px;
+    position: absolute;
+    width: 59px;
     height: 69px;
+    right:0;
     top: 0;
-    transform: translateX(69px);
+    transform: translateX(59px);
     transition: all 0.5s ease-in-out;
 
     &.btn-card {

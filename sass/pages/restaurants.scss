@@ -103,8 +103,11 @@ main{
 
 .info{
     @include d-Flex(center, flex-start, column);
+    width: 100%;
+    max-width: calc(100% - 40px);
 
     p, h3{
+        max-width: calc(100% - 10px);
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -114,11 +117,11 @@ main{
 
 .btn-card:hover > .card-food > .info p, 
 .btn-card:hover > .card-food > .info h3 {
-    max-width: calc(100% - 5px);
+    max-width: calc(100% - 59px);
 } 
 
 .price{
-    margin-right: -35px;
+    width: 40px;
     transition: all 0.5s ease-in-out;
 
     p{
