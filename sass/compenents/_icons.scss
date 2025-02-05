@@ -30,10 +30,10 @@
 
   // ICON CHECK BOX //
 .check-box{
+    position: absolute;
     @include d-Flex(center, center);
     background-color: $tertiary-color;
     min-width: 59px;
-    position: absolute;
     width: 59px;
     height: 69px;
     right:0;

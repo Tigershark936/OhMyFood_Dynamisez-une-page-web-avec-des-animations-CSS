@@ -120,11 +120,11 @@ td, th {
 }
 
 .btn-card:hover > .card-food > .info {
-  width: calc(100% - 69px);
+  width: calc(100% - 59px);
 }
 
 .btn-card:hover > .card-food > .price {
-  transform: translateX(-69px);
+  transform: translateX(-59px);
 }
 
 .btn-card:hover > .check-box {
@@ -163,15 +163,18 @@ td, th {
 }
 
 .check-box {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-color: #99e2d0;
   min-width: 59px;
+  width: 59px;
   height: 69px;
+  right: 0;
   top: 0;
-  transform: translateX(69px);
+  transform: translateX(59px);
   transition: all 0.5s ease-in-out;
 }
 .check-box.btn-card {
@@ -377,8 +380,11 @@ main p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
+  max-width: calc(100% - 50px);
 }
 .info p, .info h3 {
+  max-width: calc(100% - 10px);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -387,11 +393,12 @@ main p {
 
 .btn-card:hover > .card-food > .info p,
 .btn-card:hover > .card-food > .info h3 {
-  max-width: calc(100% - 5px);
+  max-width: calc(100% - 59px);
 }
 
 .price {
-  margin-right: -35px;
+  width: 40px;
+  margin-left: -10px;
   transition: all 0.5s ease-in-out;
 }
 .price p {
