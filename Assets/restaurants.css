@@ -381,14 +381,17 @@ main p {
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  max-width: calc(100% - 50px);
+  max-width: calc(100% - 30px);
 }
-.info p, .info h3 {
+.info h3, .info p {
   max-width: calc(100% - 10px);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+}
+.info p {
+  margin-top: 5px;
 }
 
 .btn-card:hover > .card-food > .info p,
