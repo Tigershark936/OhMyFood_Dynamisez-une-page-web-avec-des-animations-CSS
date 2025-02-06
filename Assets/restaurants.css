@@ -476,7 +476,7 @@ main p {
   main .entries, main .dish, main .dessert {
     padding-top: 0;
     padding-right: 210px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
     padding-left: 210px;
   }
 }

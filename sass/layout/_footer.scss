@@ -16,6 +16,7 @@ footer{
     .footer-item{
         @include d-Flex(flex-start, center);
         gap: 11px;
+        line-height: 20px;
     }
 }
 
@@ -30,6 +31,7 @@ footer{
         .footer-nav{
             @include d-Flex(flex-start, center);
             gap: 16px;
+            margin-top: 5px;
         }
 
         .footer-party{

@@ -190,7 +190,7 @@ main{
         }
 
         .entries, .dish, .dessert{
-            @include padding(0, 210px, 40px, 210px);
+            @include padding(0, 210px, 0px, 210px);
         }
     }
 }
